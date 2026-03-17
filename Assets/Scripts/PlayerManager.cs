@@ -21,12 +21,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddItem(Items itemToAdd)
     {
         if(!m_inventory.HasItem(itemToAdd))
@@ -49,7 +43,12 @@ public class PlayerManager : MonoBehaviour
 
     public void ShowInventory()
     {
-    
+        
+    }
+
+    public bool HasItem(Items itemToDrop)
+    {
+        return m_inventory.HasItem(itemToDrop);
     }
 
     
