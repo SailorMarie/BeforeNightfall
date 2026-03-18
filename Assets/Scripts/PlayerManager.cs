@@ -51,5 +51,10 @@ public class PlayerManager : MonoBehaviour
         return m_inventory.HasItem(itemToDrop);
     }
 
+    public void CraftingItem(Items Item, Vector3 spawnPosition)
+    {
+        m_inventory.CraftingItem(Item, spawnPosition);
+    }
+
     
 }

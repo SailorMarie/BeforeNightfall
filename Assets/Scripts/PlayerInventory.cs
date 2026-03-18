@@ -26,7 +26,7 @@ public class PlayerInventory : MonoBehaviour
 
     public bool HasItem(Items item)
     {
-        return m_inventory.ContainsKey(item);
+        return m_inventory.ContainsKey(item) && m_inventory[item] > 0;
     }
 
     public void DropItem(Items item, Vector3 spawnPosition)
@@ -37,6 +37,12 @@ public class PlayerInventory : MonoBehaviour
             RemoveItem(item);
 
         }
+    }
+
+    public void CraftingItem(Items item, Vector3 spawnPosition)
+    {
+        Instantiate(item.Prefab, spawnPosition, Quaternion.identity);
+        AddItem(item);
     }
 
     public void ShowInventory()
