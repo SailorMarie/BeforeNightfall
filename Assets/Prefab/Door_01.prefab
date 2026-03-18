@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8749eef9a4d2953449a2e8fee265df93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8749eef9a4d2953449a2e8fee265df93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.884

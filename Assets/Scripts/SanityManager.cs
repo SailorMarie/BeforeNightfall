@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class SanityManager : MonoBehaviour
 {
@@ -11,21 +12,21 @@ public class SanityManager : MonoBehaviour
     private float m_sanityLostRate = 0.25f;
 
     
-    void Update()
+    private void Update()
     {
         Sanity?.Invoke();
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         Sanity += OnLostSanity;
-        Sanity -= OnGainSanity;
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
         Sanity -= OnLostSanity;
-        Sanity += OnGainSanity;
+        
     }
 
     private void OnLostSanity()
@@ -34,7 +35,7 @@ public class SanityManager : MonoBehaviour
         if(m_sanityLostRate <= 0)
         {
             m_sanity = 0;
-            //die
+            SceneManager.LoadScene("Died");
         }
         Debug.Log(m_sanity);
     }

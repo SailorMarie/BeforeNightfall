@@ -7,7 +7,13 @@ public class InteractibleCraftStation : Interactible
 {
     [SerializeField] private Recipes m_recipes;
     private bool m_playerHasItems;
-    private Vector3 m_posCraftTable = new Vector3(3.0f, 1.5f, -4.7f);
+    private Vector3 m_posCraftTable;
+
+    private void Awake()
+    {
+        m_posCraftTable = transform.position;
+    }
+
 
     public override void Interact()
     {
