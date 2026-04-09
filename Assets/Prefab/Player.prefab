@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4186653177208610681}
   - component: {fileID: 402188530253986493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,8 @@ GameObject:
   - component: {fileID: 327050750477723808}
   - component: {fileID: 2750426657796097956}
   - component: {fileID: 3191762376147183864}
-  m_Layer: 0
+  - component: {fileID: 3064460977569056473}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,3 +347,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9b78bdcd2dd3e44af8c70f39162c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3064460977569056473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257723170486455525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25

@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 95bd28c71408709458fa4f8b64cdb38b, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: ce7ced0af67affe4cb0756bd273d96c2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -716,6 +716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
 --- !u!65 &246950782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1061,6 +1064,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
 --- !u!65 &353088272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1450,6 +1456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
 --- !u!65 &617078827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1929,6 +1938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
 --- !u!65 &947563003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2022,7 +2034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 138.31354
+      value: 138.14
       objectReference: {fileID: 0}
     - target: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2030,7 +2042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -42.82705
+      value: -44.27
       objectReference: {fileID: 0}
     - target: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3109,6 +3121,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6733133823532937951, guid: 32070042899093c4ebc66a7559bd607f, type: 3}
   m_PrefabInstance: {fileID: 2124300112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1439984718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1439984720}
+  - component: {fileID: 1439984719}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1439984719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439984718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
+--- !u!4 &1439984720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439984718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 86.723694, y: 13.706615, z: 88.10693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598627238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
 --- !u!65 &1677827219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3993,7 +4055,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -4130,15 +4192,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 415204, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 138.21155
+      value: 37.7
       objectReference: {fileID: 0}
     - target: {fileID: 415204, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.8049393
+      value: 6.35
       objectReference: {fileID: 0}
     - target: {fileID: 415204, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.762054
+      value: -52.24
       objectReference: {fileID: 0}
     - target: {fileID: 415204, guid: a653d3366756c8641befacf512a2be62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4423,6 +4485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_globalVolume: {fileID: 0}
+  m_sanityLostRate: 0.25
+  m_fadeSpeed: 0.25
 --- !u!65 &2112459418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4586,6 +4651,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 369c5d40965b5064eb97cff20e4bacec, type: 2}
+    - target: {fileID: 3064460977569056473, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: globalVolume
+      value: 
+      objectReference: {fileID: 832575518}
     - target: {fileID: 4186653177208610681, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.418
@@ -4731,3 +4800,4 @@ SceneRoots:
   - {fileID: 190356334}
   - {fileID: 162483504}
   - {fileID: 1243429889}
+  - {fileID: 1439984720}
