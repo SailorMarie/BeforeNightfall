@@ -34,13 +34,8 @@ public class SanityManager : MonoBehaviour
             m_chromatic = chrom;
         }
     }
-    
-    private void OnTriggerEnter(Collider other)
-    {
-        OnLostSanity();
-    }
 
-    private void OnLostSanity()
+    public void OnLostSanity()
     {
         if(m_firstTimeOnLostSanity)
         {

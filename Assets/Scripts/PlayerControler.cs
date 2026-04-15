@@ -21,6 +21,7 @@ public class PlayerControler : MonoBehaviour
     private LayerMask m_craftableLayer;
 
     
+    
     private void Awake()
     {
         m_body = GetComponent<Rigidbody>();    
@@ -60,11 +61,25 @@ public class PlayerControler : MonoBehaviour
        
         if (m_canJump)
         {
-
             m_body.AddForceAtPosition(new Vector2(0, m_jumpForce), Vector2.up, ForceMode.Impulse);
-
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        //if (other.gameObject.layer == LayerMask.NameToLayer("Shadow"))
+        //{
+        //    GameManager.Instance.
+        //    SanityManager.OnLostSanity();
+        //}
+        //if (other.gameObject.layer == LayerMask.NameToLayer("Cabin"))
+        //{
+        //    CabinTeleport.Teleport();
+        //}
+        //if (other.gameObject.layer == LayerMask.NameToLayer("Respawn"))
+        //{
+        //    RespawnManager.Respawn();
+        //}
     }
 
     private void LateUpdate()
