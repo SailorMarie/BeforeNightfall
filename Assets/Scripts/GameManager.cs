@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    //ui
+
     private CabinTeleport cabinTeleport;
     private RespawnManager respawnManager;
     private SanityManager sanityManager;

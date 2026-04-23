@@ -37,16 +37,15 @@ public class SanityManager : MonoBehaviour
 
     public void OnLostSanity()
     {
-        if(m_firstTimeOnLostSanity)
+        if (m_firstTimeOnLostSanity)
         {
-            //SceneManager.LoadScene(SECOND_SCENE);
-            //pop up de ui qui explique sanity
-            m_firstTimeOnLostSanity = false;
+            
+            m_sanity -= m_sanityLostRate * Time.deltaTime;
+            m_vignette.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
+            m_chromatic.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
+            //appeler ui
+
         }
-        m_sanity -= m_sanityLostRate * Time.deltaTime;
-        m_vignette.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
-        m_chromatic.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
-       
         if(m_sanityLostRate <= 0)
         {
             //screen tout noire, reload de la scene
