@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
     public Action m_interact;
     [SerializeField] private PlayerInventory m_inventory;
+    
 
     void Start()
     {
@@ -27,7 +28,6 @@ public class PlayerManager : MonoBehaviour
             //appeler ui pour show le pickup
         }
         m_inventory.AddItem(itemToAdd);
-        m_inventory.ShowInventory();
     }
 
     public void RemoveItem(Items itemToRemove)
@@ -42,7 +42,7 @@ public class PlayerManager : MonoBehaviour
 
     public void ShowInventory()
     {
-        
+        m_inventory.ShowInventory();
     }
 
     public bool HasItem(Items itemToDrop)

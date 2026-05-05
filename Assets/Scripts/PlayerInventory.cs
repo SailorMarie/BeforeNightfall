@@ -5,7 +5,8 @@ public class PlayerInventory : MonoBehaviour
 {
     private Dictionary<Items, int> m_inventory = new Dictionary<Items, int>();
 
-
+    [SerializeField] private Window m_inventoryWindow;
+    private InventoryWindow m_currentInventoryWindow;
 
     public void AddItem(Items item)
     {
@@ -47,9 +48,15 @@ public class PlayerInventory : MonoBehaviour
 
     public void ShowInventory()
     {
-        foreach(var item in m_inventory)
+        if (m_currentInventoryWindow != null)
         {
-            Debug.Log(item.Key.name + ": " + item.Value);
+            m_currentInventoryWindow.Close();
+            m_currentInventoryWindow = null;
+        }
+        else
+        {
+            m_currentInventoryWindow = (InventoryWindow)UIManager.Instance.OpenWindow(m_inventoryWindow);
+            m_currentInventoryWindow.Initialize(this);
         }
     }
 }

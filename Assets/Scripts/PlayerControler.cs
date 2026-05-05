@@ -17,6 +17,7 @@ public class PlayerControler : MonoBehaviour
     private bool m_isMoving;
     private bool m_canJump;
     private InputAction m_interact;
+    private InputAction m_Inventory;
 
     private LayerMask m_craftableLayer;
 
@@ -28,7 +29,19 @@ public class PlayerControler : MonoBehaviour
         m_inputAction = InputSystem.actions;
         m_interact = m_inputAction.FindAction("Interact");
 
-        
+    }
+
+    public void OnInventory(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            m_Inventory = m_inputAction.FindAction("Inventory");
+            if (m_Inventory.WasPressedThisFrame())
+            {
+                PlayerManager.Instance.ShowInventory();
+            }
+
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -36,6 +49,7 @@ public class PlayerControler : MonoBehaviour
         m_movementInput = context.ReadValue<Vector2>();
         m_isMoving = m_movementInput != Vector2.zero;
         m_jumpAction = context.ReadValue<Vector2>();
+        
 
     }
 
