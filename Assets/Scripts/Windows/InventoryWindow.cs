@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class InventoryWindow : Window
 {
-    private PlayerInventory m_playerInventory;
+    private PlayerInventoryController m_playerInventory;
     [SerializeField] private List<Image> m_inventorySlot;
 
-    public void Initialize(PlayerInventory playerInventory)
+    public void Initialize(PlayerInventoryController playerInventory)
     {
         m_playerInventory = playerInventory;
     }

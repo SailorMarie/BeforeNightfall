@@ -2,7 +2,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerControler : MonoBehaviour
+public class PlayerInputControler : MonoBehaviour
 {
     private InputActionAsset m_inputAction;
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInventory : MonoBehaviour
+public class PlayerInventoryController : MonoBehaviour
 {
     private Dictionary<Items, int> m_inventory = new Dictionary<Items, int>();
 

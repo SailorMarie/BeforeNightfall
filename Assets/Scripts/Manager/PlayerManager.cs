@@ -5,7 +5,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
     public Action m_interact;
-    [SerializeField] private PlayerInventory m_inventory;
+    [SerializeField] private PlayerInventoryController m_inventory;
     
 
     void Start()

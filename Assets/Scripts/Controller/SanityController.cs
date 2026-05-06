@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-public class SanityManager : MonoBehaviour
+public class SanityController : MonoBehaviour
 {
     [SerializeField]
     private Volume m_globalVolume;

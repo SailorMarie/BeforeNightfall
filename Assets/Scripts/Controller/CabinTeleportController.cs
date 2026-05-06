@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CabinTeleport : MonoBehaviour
+public class CabinTeleportController : MonoBehaviour
 {
     [SerializeField] private Transform m_teleportPointOne;
    // [SerializeField] private Transform m_teleportPointTwo;

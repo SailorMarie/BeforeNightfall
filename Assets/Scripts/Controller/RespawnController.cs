@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RespawnManager : MonoBehaviour
+public class RespawnController : MonoBehaviour
 {
     [SerializeField] private Transform m_respawnPoint;
     [SerializeField] private Transform m_player;
