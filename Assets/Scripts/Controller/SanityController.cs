@@ -16,14 +16,15 @@ public class SanityController : MonoBehaviour
     [SerializeField]
     private float m_fadeSpeed = 0.25f; // same value as m_sanityLostRate
     [SerializeField] private List<Shadow> shadows;
-
+    [SerializeField] private Window m_sanitySliderWindow;
+    private SanitySliderWindow m_currentSanitySliderWindow;
 
     private Vignette m_vignette;
     private ChromaticAberration m_chromatic;
     private int m_division = 100;
     private float m_sanity = 100;
     private float m_maxSanity = 100;
-    private bool m_firstTimeOnLostSanity = true;
+    private bool m_firstTimeOnLostSanity = false;
     
     public Action OnSanityLostStart;
     public Action OnSanityLostStop;
@@ -56,6 +57,10 @@ public class SanityController : MonoBehaviour
         {
             shadow.Init(this);
         }
+        if(m_firstTimeOnLostSanity)
+        {
+            m_currentSanitySliderWindow = (SanitySliderWindow)UIManager.Instance.OpenWindow(m_sanitySliderWindow);
+        }
     }
 
     public void LostSanityStart()
@@ -70,6 +75,10 @@ public class SanityController : MonoBehaviour
             m_sanity -= m_sanityLostRate * Time.deltaTime;
             m_vignette.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
             m_chromatic.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
+            if (m_currentSanitySliderWindow != null)
+            {
+                m_currentSanitySliderWindow.SetSanity(m_sanity / m_maxSanity);
+            }
             Debug.Log(m_sanity);
             yield return null;
         }
@@ -77,6 +86,7 @@ public class SanityController : MonoBehaviour
         {
             //screen tout noire, reload de la scene
             m_sanity = 0;
+            m_firstTimeOnLostSanity = true;
 
         }
     }

@@ -18,8 +18,13 @@ public class GameController : MonoBehaviour
         respawnController?.SetDependencies(this);
         sanityController?.SetDependencies(this);
 
+    }
+
+    private void Start()
+    {
         cabinTeleportController?.Init();
         respawnController?.Init();
         sanityController.Init();
+        
     }
 }
