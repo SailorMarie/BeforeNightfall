@@ -35,6 +35,15 @@ public class SanityController : MonoBehaviour
         }
     }
 
+    public void SetDependencies(GameController gameController)
+    {
+
+    }
+
+    public void OnInit()
+    {
+    }
+
     public void OnLostSanity()
     {
         if (m_firstTimeOnLostSanity)

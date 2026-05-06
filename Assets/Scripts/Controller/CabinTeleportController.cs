@@ -1,30 +1,31 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CabinTeleportController : MonoBehaviour
 {
-    [SerializeField] private Transform m_teleportPointOne;
-   // [SerializeField] private Transform m_teleportPointTwo;
-  //  [SerializeField] private Transform m_teleportPointThree;
-   // [SerializeField] private Transform m_cabin;
+    [SerializeField] private List<CabinTeleporter> m_teleportationPoint;
+    [SerializeField] private Transform m_cabin;
+    private GameController m_gameController;
 
-    private int m_wasTeleport = 0;
+    public Action<Transform> OnTeleporterReach;
 
-    public void Teleport()
+    public void SetDependencies(GameController gameController)
     {
-        if(m_wasTeleport == 0)
+        m_gameController = gameController;
+    }
+
+    public void Init()
+    {
+        OnTeleporterReach += Teleport;
+        foreach (CabinTeleporter teleporter in m_teleportationPoint)
         {
-            gameObject.transform.position = m_teleportPointOne.position;
-            m_wasTeleport++;
+            teleporter.Init(m_gameController);
         }
-        //if(m_wasTeleport == 1)
-        //{
-        //    m_cabin.transform.position = m_teleportPointTwo.position;
-        //    m_wasTeleport++;
-        //}
-        //if(m_wasTeleport == 2)
-        //{
-        //    m_cabin.transform.position = m_teleportPointThree.position;
-        //    m_wasTeleport++;
-        //}
+    }
+
+    public void Teleport(Transform destination)
+    {
+        m_cabin.transform.position = destination.position;
     }
 }

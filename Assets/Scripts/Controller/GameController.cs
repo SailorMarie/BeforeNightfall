@@ -1,24 +1,22 @@
 using UnityEngine;
 
-public class GameManagerController : MonoBehaviour
+public class GameController : MonoBehaviour
 {
-    public static GameManagerController Instance;
 
     //ui
 
-    private CabinTeleportController cabinTeleport;
-    private RespawnController respawnManager;
-    private SanityController sanityManager;
+    public CabinTeleportController cabinTeleportController { private set; get; }
+    public RespawnController respawnController { private set; get; }
+    public SanityController sanityController { private set; get; }
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Instance = this;
-        }
+        cabinTeleportController = GetComponentInChildren<CabinTeleportController>();
+        respawnController = GetComponentInChildren<RespawnController>();
+        sanityController = GetComponentInChildren<SanityController>();
 
-        cabinTeleport = GetComponentInChildren<CabinTeleportController>();
-        respawnManager = GetComponentInChildren<RespawnController>();
-        sanityManager = GetComponentInChildren<SanityController>();
+        cabinTeleportController.SetDependencies(this);
+
+        cabinTeleportController.Init();
     }
 }

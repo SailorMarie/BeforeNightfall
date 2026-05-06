@@ -5,6 +5,16 @@ public class RespawnController : MonoBehaviour
     [SerializeField] private Transform m_respawnPoint;
     [SerializeField] private Transform m_player;
 
+
+    public void SetDependencies(GameController gameController)
+    {
+
+    }
+
+    public void Init()
+    {
+    }
+
     public void Respawn()
     {
         //faire une coroutine
