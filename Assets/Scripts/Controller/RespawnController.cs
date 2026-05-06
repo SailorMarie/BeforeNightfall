@@ -1,25 +1,35 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RespawnController : MonoBehaviour
 {
-    [SerializeField] private Transform m_respawnPoint;
-    [SerializeField] private Transform m_player;
+    [SerializeField] private List<RespawnTeleporter> m_respawnZone;
 
+    private PlayerManager m_playerManager;
+    private GameController m_gameController;
+
+    public Action<Transform> OnRespawnPointReach;
 
     public void SetDependencies(GameController gameController)
     {
+        m_playerManager = gameController.playerManager;
+        m_gameController = gameController;
 
     }
 
     public void Init()
     {
+        OnRespawnPointReach += Respawn;
+        foreach (RespawnTeleporter teleporter in m_respawnZone)
+        {
+            teleporter.Init(m_gameController);
+        }
     }
 
-    public void Respawn()
+    public void Respawn(Transform destination)
     {
-        //faire une coroutine
-        m_player.transform.position = m_respawnPoint.position;
-        Rigidbody rb = m_player.GetComponent<Rigidbody>();
-        if (rb != null) rb.linearVelocity = Vector3.zero;
+        m_playerManager.SetPlayerPosition(destination);
+        
     }
 }

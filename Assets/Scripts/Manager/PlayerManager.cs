@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
     public Action m_interact;
     [SerializeField] private PlayerInventoryController m_inventory;
-    
+    [SerializeField] private Transform m_player;
 
     void Start()
     {
@@ -53,6 +53,13 @@ public class PlayerManager : MonoBehaviour
     public void CraftingItem(Items Item, Vector3 spawnPosition)
     {
         m_inventory.CraftingItem(Item, spawnPosition);
+    }
+
+    public void SetPlayerPosition(Transform destination)
+    {
+        m_player.transform.position = destination.position;
+        Rigidbody rb = m_player.GetComponent<Rigidbody>();
+        if (rb != null) rb.linearVelocity = Vector3.zero;
     }
 
     

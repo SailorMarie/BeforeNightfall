@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -13,6 +15,8 @@ public class SanityController : MonoBehaviour
     private float m_sanityLostRate = 0.25f; // same value as m_fadeSpeed
     [SerializeField]
     private float m_fadeSpeed = 0.25f; // same value as m_sanityLostRate
+    [SerializeField] private List<Shadow> shadows;
+
 
     private Vignette m_vignette;
     private ChromaticAberration m_chromatic;
@@ -21,6 +25,10 @@ public class SanityController : MonoBehaviour
     private float m_maxSanity = 100;
     private bool m_firstTimeOnLostSanity = true;
     
+    public Action OnSanityLostStart;
+    public Action OnSanityLostStop;
+
+    private Coroutine m_lostSanityCoroutine = null;
     
     
     void Start()
@@ -40,28 +48,46 @@ public class SanityController : MonoBehaviour
 
     }
 
-    public void OnInit()
+    public void Init()
     {
+        OnSanityLostStart += LostSanityStart;
+        OnSanityLostStop += LostSanityStop;
+        foreach(Shadow shadow in shadows)
+        {
+            shadow.Init(this);
+        }
     }
 
-    public void OnLostSanity()
+    public void LostSanityStart()
     {
-        if (m_firstTimeOnLostSanity)
+        m_lostSanityCoroutine = StartCoroutine(LostSanityCoroutine());
+    }
+
+    private IEnumerator LostSanityCoroutine()
+    {   
+        while (m_sanity > 0)
         {
-            
             m_sanity -= m_sanityLostRate * Time.deltaTime;
             m_vignette.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
             m_chromatic.intensity.value += m_fadeSpeed * Time.deltaTime / m_division;
-            //appeler ui
-
+            Debug.Log(m_sanity);
+            yield return null;
         }
-        if(m_sanityLostRate <= 0)
+        if (m_sanityLostRate <= 0)
         {
             //screen tout noire, reload de la scene
             m_sanity = 0;
-            
+
         }
-        Debug.Log(m_sanity);
+    }
+
+    public void LostSanityStop()
+    {
+        if (m_lostSanityCoroutine != null)
+        {
+            StopCoroutine(m_lostSanityCoroutine);
+            m_lostSanityCoroutine = null;
+        }
     }
 
     private void OnGainSanity()
