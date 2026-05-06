@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerInventoryController : MonoBehaviour
@@ -23,6 +24,10 @@ public class PlayerInventoryController : MonoBehaviour
         {
             m_inventory[item]--;
         }
+    }
+    public Items[] GetAllItemsInInventory()
+    {
+        return m_inventory.Keys.ToArray();
     }
 
     public bool HasItem(Items item)

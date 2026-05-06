@@ -2287,15 +2287,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2622631822639975217, guid: 3507cdaaddde90c4f9d635811d1351c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.094933
+      value: 35.35
       objectReference: {fileID: 0}
     - target: {fileID: 2622631822639975217, guid: 3507cdaaddde90c4f9d635811d1351c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.714939
+      value: 7.34
       objectReference: {fileID: 0}
     - target: {fileID: 2622631822639975217, guid: 3507cdaaddde90c4f9d635811d1351c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73.0264
+      value: -69.27
       objectReference: {fileID: 0}
     - target: {fileID: 2622631822639975217, guid: 3507cdaaddde90c4f9d635811d1351c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3020,6 +3020,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 931694911}
     m_Modifications:
+    - target: {fileID: 5558368696182349939, guid: 7c0be212a310e324d9f1c3d0a9ab5182, type: 3}
+      propertyPath: m_craftingWindow
+      value: 
+      objectReference: {fileID: 8464913614768338083, guid: 1698b4636839aec49a3081e70de52082, type: 3}
     - target: {fileID: 8408592595719101861, guid: 7c0be212a310e324d9f1c3d0a9ab5182, type: 3}
       propertyPath: m_Name
       value: Crate

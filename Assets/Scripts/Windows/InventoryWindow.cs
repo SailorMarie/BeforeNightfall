@@ -10,5 +10,10 @@ public class InventoryWindow : Window
     public void Initialize(PlayerInventoryController playerInventory)
     {
         m_playerInventory = playerInventory;
+        int index = 0;
+        foreach(var item in m_playerInventory.GetAllItemsInInventory())
+        {
+            m_inventorySlot[index].sprite = item.Sprite;
+        }
     }
 }

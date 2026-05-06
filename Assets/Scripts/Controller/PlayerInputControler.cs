@@ -79,23 +79,6 @@ public class PlayerInputControler : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //if (other.gameObject.layer == LayerMask.NameToLayer("Shadow"))
-        //{
-        //    GameManager.Instance.
-        //    SanityManager.OnLostSanity();
-        //}
-        //if (other.gameObject.layer == LayerMask.NameToLayer("Cabin"))
-        //{
-        //    CabinTeleport.Teleport();
-        //}
-        //if (other.gameObject.layer == LayerMask.NameToLayer("Respawn"))
-        //{
-        //    RespawnManager.Respawn();
-        //}
-    }
-
     private void LateUpdate()
     {
         Ray rayFromCamera = Camera.allCameras[0].ScreenPointToRay(Input.mousePosition);

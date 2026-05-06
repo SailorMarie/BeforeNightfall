@@ -10,17 +10,29 @@ public class InteractibleCraftStation : Interactible
     private Vector3 m_posCraftTable;
     private Vector3 m_craftingTableHeight = new Vector3(0, 1.3f, 0);
 
+    [SerializeField] private Window m_craftingWindow;
+    private CraftingWindow m_currentCraftingWindow;
+
     private void Awake()
     {
         m_posCraftTable = transform.position;
-       
     }
 
 
     public override void Interact()
     {
         m_playerHasItems = true;
-        for(int i = 0; i < m_recipes.m_ingredients.Count; i++)
+        if (m_currentCraftingWindow != null)
+        {
+            m_currentCraftingWindow.Close();
+            m_currentCraftingWindow = null;
+        }
+        else
+        {
+            m_currentCraftingWindow = (CraftingWindow)UIManager.Instance.OpenWindow(m_craftingWindow);
+            m_currentCraftingWindow.Initialize(this);
+        }
+        for (int i = 0; i < m_recipes.m_ingredients.Count; i++)
         {
             
             if (!PlayerManager.Instance.HasItem(m_recipes.m_ingredients[i]))
