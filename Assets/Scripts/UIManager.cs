@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    private Dictionary<Window, EnumWindows.WindowLayers> m_windowToLayer = new();
+    private Dictionary< EnumWindows.WindowLayers, Window> m_windowToLayer = new();
     private Dictionary<EnumWindows.WindowLayers, Transform> m_transformToLayer = new();
 
     private void Awake()
@@ -41,38 +41,33 @@ public class UIManager : MonoBehaviour
 
     public Window OpenWindow(Window window)
     {
-        //foreach (KeyValuePair<Window, EnumWindows.WindowLayers> m_window in m_windowToLayer)
-        //{
-        //    if (m_window.Value == window.m_layer.Layer)
-        //    {
-        //        CloseWindow(m_window.Key);
-        //    }
-        //}
-        List<EnumWindows.WindowLayers> layers = m_windowToLayer.Values.ToList();
-        List<Window> windows = m_windowToLayer.Keys.ToList();
-
-        for (int i = m_windowToLayer.Count - 1; i >= 0; i--)
+        EnumWindows.WindowLayers windowType = window.m_layer.Layer;
+        if (m_windowToLayer.ContainsKey(windowType))
         {
-            if (layers[i] == window.m_layer.Layer)
-            {
-                CloseWindow(windows[i]);
-            }
+
+            CloseWindow(m_windowToLayer[windowType]);
+        }
+        if (m_transformToLayer.TryGetValue(windowType, out Transform layerTransform))
+        {
+            Window newWindow = Instantiate(window, layerTransform);
+            m_windowToLayer.TryAdd(windowType, newWindow);
+            return newWindow;
         }
 
-        if (m_transformToLayer.TryGetValue(window.m_layer.Layer, out Transform transform))
-        {
-            Window instanciatedWindow = Instantiate(window, transform);
-            m_windowToLayer.TryAdd(instanciatedWindow, window.m_layer.Layer);
-        }
-
-        return window;
+        return null;
     }
 
     public void CloseWindow(Window window)
     {
-        if (m_windowToLayer.Remove(window))
+        EnumWindows.WindowLayers windowType = window.m_layer.Layer;
+        if (m_windowToLayer.ContainsKey(windowType) && m_windowToLayer[windowType] == window)
         {
+            m_windowToLayer.Remove(windowType);
             Destroy(window.gameObject);
+        }
+        else
+        {
+            Debug.LogWarning($"Attempted to close a window of type {windowType} that is not currently open.");
         }
     }
 
