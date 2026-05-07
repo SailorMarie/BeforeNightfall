@@ -14,6 +14,7 @@ public class InventoryWindow : Window
         foreach(var item in m_playerInventory.GetAllItemsInInventory())
         {
             m_inventorySlot[index].sprite = item.Sprite;
+            index++;
         }
     }
 }
