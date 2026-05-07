@@ -31,6 +31,8 @@ public class SanityController : MonoBehaviour
     public Action OnSanityLostStop;
 
     private Coroutine m_lostSanityCoroutine = null;
+
+    private const string GAME_SCENE = "Game";
     
     
     void Start()
@@ -91,12 +93,13 @@ public class SanityController : MonoBehaviour
             Debug.Log(m_sanity);
             yield return null;
         }
-        if (m_sanityLostRate <= 0)
+        if (m_sanity <= 0)
         {
             //screen tout noire, reload de la scene
             m_sanity = 0;
             m_sanityLostRate = 0.25f;
             m_firstTimeOnLostSanity = true;
+            SceneManager.LoadScene(GAME_SCENE);
 
         }
     }

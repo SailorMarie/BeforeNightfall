@@ -9,6 +9,7 @@ public class InteractibleCraftStation : Interactible
     private bool m_playerHasItems;
     private Vector3 m_posCraftTable;
     private Vector3 m_craftingTableHeight = new Vector3(0, 1.3f, 0);
+    private PlayerInventoryController m_playerInventoryController;
 
     [SerializeField] private Window m_craftingWindow;
     private CraftingWindow m_currentCraftingWindow;
@@ -29,6 +30,7 @@ public class InteractibleCraftStation : Interactible
         }
         else
         {
+            m_playerInventoryController.GetAllItemsInInventory();
             m_currentCraftingWindow = (CraftingWindow)UIManager.Instance.OpenWindow(m_craftingWindow);
             m_currentCraftingWindow.Initialize(this);
         }

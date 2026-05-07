@@ -16,6 +16,6 @@ MonoBehaviour:
   <Name>k__BackingField: Bone
   <FirstPickUp>k__BackingField: Now that's creepy
   <Description>k__BackingField: What is it doing here? Why are you touching it?
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 12c4622d61843514781a9ad2608b9d0e, type: 3}
   <InspectorItem>k__BackingField: {fileID: 0}
   <Prefab>k__BackingField: {fileID: 7826601984677990377, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}

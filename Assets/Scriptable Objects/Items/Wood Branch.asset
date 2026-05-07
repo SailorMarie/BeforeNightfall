@@ -17,6 +17,6 @@ MonoBehaviour:
   <FirstPickUp>k__BackingField: This seems usefull
   <Description>k__BackingField: A small wooden branch. Usefull for a lot of craftable
     recipe
-  <Sprite>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: b7ed63738f1279b4f8bb728ab248d51a, type: 3}
   <InspectorItem>k__BackingField: {fileID: 5252389275649414144, guid: c930d3eca64e1c04785ddfe6f0c2376d, type: 3}
   <Prefab>k__BackingField: {fileID: 5252389275649414144, guid: c930d3eca64e1c04785ddfe6f0c2376d, type: 3}

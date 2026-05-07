@@ -6,10 +6,14 @@ public class CraftingWindow : Window
 {
     private InteractibleCraftStation m_interactibleCraftStation;
     [SerializeField] private List<Image> m_inventorySlot;
-    [SerializeField] private List<ScriptableObject> m_scriptableObject;
 
     public void Initialize(InteractibleCraftStation interactibleCraftStation)
     {
         m_interactibleCraftStation = interactibleCraftStation;
+        int index = 0;
+        //foreach (var item in m_playerInventory.GetAllItemsInInventory())
+        //{
+        //    m_inventorySlot[index].sprite = item.Sprite;
+        //}
     }
 }

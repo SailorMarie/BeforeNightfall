@@ -8,7 +8,7 @@ public class PlayerInputControler : MonoBehaviour
 
     [SerializeField]private float m_speed;
     [SerializeField]private int m_jumpForce;
-    [SerializeField]private int m_maxDistance = 1000;
+    [SerializeField]private int m_maxDistance = 1000; //max distance du rayCast
     
    
     private Rigidbody m_body;

@@ -25,6 +25,7 @@ public class PlayerInventoryController : MonoBehaviour
             m_inventory[item]--;
         }
     }
+
     public Items[] GetAllItemsInInventory()
     {
         return m_inventory.Keys.ToArray();

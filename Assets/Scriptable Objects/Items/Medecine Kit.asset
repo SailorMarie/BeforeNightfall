@@ -16,6 +16,6 @@ MonoBehaviour:
   <Name>k__BackingField: Medecine kit
   <FirstPickUp>k__BackingField: You can finally heal yourself
   <Description>k__BackingField: Use it to heal yoursealf and your sanity
-  <Sprite>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 1ecb9289a3c20c64192f437e632378d1, type: 3}
   <InspectorItem>k__BackingField: {fileID: 2435495025711759733, guid: cea89a3b9cc30e04a8253557374d1780, type: 3}
   <Prefab>k__BackingField: {fileID: 2435495025711759733, guid: cea89a3b9cc30e04a8253557374d1780, type: 3}

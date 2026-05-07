@@ -16,6 +16,6 @@ MonoBehaviour:
   <Name>k__BackingField: Broken Radio
   <FirstPickUp>k__BackingField: it's broken
   <Description>k__BackingField: It broke when you fell from the waterfall.
-  <Sprite>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: da49dab69e14e5846b2380aab778831f, type: 3}
   <InspectorItem>k__BackingField: {fileID: 1189841563777724979, guid: ae6edb07cc0eb524b90925dd31c47e15, type: 3}
   <Prefab>k__BackingField: {fileID: 1189841563777724979, guid: ae6edb07cc0eb524b90925dd31c47e15, type: 3}
