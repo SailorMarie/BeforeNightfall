@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2068010483582263222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.77, z: 0}
+  m_LocalPosition: {x: 0, y: 1.418, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63,7 +63,6 @@ GameObject:
   - component: {fileID: 327050750477723808}
   - component: {fileID: 2750426657796097956}
   - component: {fileID: 3191762376147183864}
-  - component: {fileID: 3064460977569056473}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -118,7 +117,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4fd2aa1fe917c5747a26c89618810847, type: 2}
+  - {fileID: 2100000, guid: 369c5d40965b5064eb97cff20e4bacec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -315,6 +314,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6cb7e8de-cf38-4922-be57-41a3948e1f2e
+    m_ActionName: 'Player/Inventory[/Keyboard/i]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -347,17 +350,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9b78bdcd2dd3e44af8c70f39162c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3064460977569056473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7257723170486455525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e1aa2c25a0b7b148a83d1f777113ef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_globalVolume: {fileID: 0}
-  m_sanityLostRate: 0.25
+  m_inventoryWindow: {fileID: 0}

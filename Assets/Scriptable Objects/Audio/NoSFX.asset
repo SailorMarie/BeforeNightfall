@@ -10,8 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 711d45818b812ef4794f185df2b16f9e, type: 3}
-  m_Name: MusicData
+  m_Name: NoSFX
   m_EditorClassIdentifier: 
-  audioClips:
-  - _audioName: 
-    _audioClip: {fileID: 0}
+  audioClips: []

@@ -99,7 +99,7 @@ public class SanityController : MonoBehaviour
             m_sanity = 0;
             m_sanityLostRate = 0.25f;
             m_firstTimeOnLostSanity = true;
-            SceneManager.LoadScene(GAME_SCENE);
+            SceneLoaderManager.Instance.LoadScene(GAME_SCENE);
 
         }
     }
