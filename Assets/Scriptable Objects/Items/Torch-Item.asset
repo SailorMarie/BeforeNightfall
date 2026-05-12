@@ -16,6 +16,6 @@ MonoBehaviour:
   <Name>k__BackingField: Torch
   <FirstPickUp>k__BackingField: You can now see in the dark
   <Description>k__BackingField: Use it to not loose sanity
-  <Sprite>k__BackingField: {fileID: 0}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: fbfd6a6a6bb9c394a888cc56e96c1d62, type: 3}
   <InspectorItem>k__BackingField: {fileID: 0}
   <Prefab>k__BackingField: {fileID: 8248394516487863760, guid: c848d71d44f3c684ab4271d039b05152, type: 3}

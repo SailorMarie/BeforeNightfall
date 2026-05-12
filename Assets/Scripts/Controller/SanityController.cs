@@ -19,6 +19,7 @@ public class SanityController : MonoBehaviour
     [SerializeField] private List<Shadow> shadows;
     [SerializeField] private Window m_sanitySliderWindow;
     private SanitySliderWindow m_currentSanitySliderWindow;
+    [SerializeField] private AudioData m_murmur;
 
     private Vignette m_vignette;
     private ChromaticAberration m_chromatic;
@@ -76,6 +77,7 @@ public class SanityController : MonoBehaviour
     public void LostSanityStart()
     {
         m_lostSanityCoroutine = StartCoroutine(LostSanityCoroutine());
+        AudioManager.Instance.PlayAudio(AudioManager.AudioType.SFX, m_murmur);
     }
 
     private IEnumerator LostSanityCoroutine()
@@ -109,6 +111,7 @@ public class SanityController : MonoBehaviour
         if (m_lostSanityCoroutine != null)
         {
             StopCoroutine(m_lostSanityCoroutine);
+            AudioManager.Instance.StopAudio(AudioManager.AudioType.SFX, m_murmur);
             m_lostSanityCoroutine = null;
         }
     }

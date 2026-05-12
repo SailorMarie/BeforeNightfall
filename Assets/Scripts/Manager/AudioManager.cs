@@ -1,18 +1,20 @@
 using System;
 using UnityEngine;
 using Unity.VisualScripting;
+using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
     public enum AudioType
     {
         SFX,
-        Music
+        MUSIC
     }
 
     public static AudioManager Instance;
-    [SerializeField] private AudioData m_sfxAudioData;
-    [SerializeField] private AudioData m_musicAudioData;
+    //[SerializeField] private AudioData[] m_sfxAudioData;
+    //[SerializeField] private AudioData[] m_musicAudioData;
 
     [SerializeField] private AudioSource m_musicAudioSource;
     [SerializeField] private AudioSource m_sfxAudioSource;
@@ -34,54 +36,77 @@ public class AudioManager : MonoBehaviour
         SetSFXVolume(PlayerPrefs.GetFloat("SFXVolume", defaultSFXVolume));
         DontDestroyOnLoad(gameObject);
     }
-    public void PlayAudio(AudioType audioType, string audioName)
+    public void PlayAudio(AudioType audioType, AudioData audioData)
     {
         switch (audioType)
         {
             case AudioType.SFX:
-                PlaySFX(audioName);
+                PlaySFX(audioData);
                 break;
-            case AudioType.Music:
-                PlayMusic(audioName);
+            case AudioType.MUSIC:
+                PlayMusic(audioData);
                 break;
         }
     }
 
-    private void PlayMusic(string audioName)
+    private void PlayMusic(AudioData audioData)
     {
-        AudioData.audioDataHelper audioDataHelper = Array.Find(m_musicAudioData.audioClips, x => x._audioName == audioName);
 
-        if (audioDataHelper.IsUnityNull())
+
+        if (audioData.IsUnityNull())
         {
-            Debug.LogError($"Music not found : {audioName}");
+            Debug.LogError($"Music not found : {audioData.name}");
         }
-        else if (audioDataHelper._audioClip == null)
+        else if (audioData.audioClip._audioName == null)
         {
-            Debug.LogError($"Music clip missing : {audioName}");
+            Debug.LogError($"Music clip missing : {audioData.audioClip._audioName}");
         }
         else
         {
-            m_musicAudioSource.clip = audioDataHelper._audioClip;
+            m_musicAudioSource.clip = audioData.audioClip._audioClip;
             m_musicAudioSource.Play();
         }
     }
 
-    private void PlaySFX(string audioName)
+    private void PlaySFX(AudioData audioData)
     {
-        AudioData.audioDataHelper audioDataHelper = Array.Find(m_sfxAudioData.audioClips, x => x._audioName == audioName);
+        
 
-        if (audioDataHelper.IsUnityNull())
+        if (audioData.IsUnityNull())
         {
-            Debug.Log($"SFX not found : {audioName}");
+            Debug.Log($"SFX not found : {audioData.name}");
         }
-        else if (audioDataHelper._audioClip == null)
+        else if (audioData.audioClip._audioClip == null)
         {
-            Debug.LogError($"SFX clip missing : {audioName}");
+            Debug.LogError($"SFX clip missing : {audioData.name}");
         }
         else
         {
-            m_sfxAudioSource.PlayOneShot(audioDataHelper._audioClip);
+            m_sfxAudioSource.PlayOneShot(audioData.audioClip._audioClip);
         }
+    }
+
+    public void StopAudio(AudioType audioType, AudioData audioData)
+    {
+        switch (audioType)
+        {
+            case AudioType.SFX:
+                StopSFX();
+                break;
+            case AudioType.MUSIC:
+                StopMusic();
+                break;
+        }
+    }
+
+    private void StopMusic()
+    {
+        m_musicAudioSource.Stop();
+    }
+
+    private void StopSFX()
+    {
+        m_sfxAudioSource.Stop();
     }
 
     public void SetVolume(AudioType audioType, float volume)
@@ -91,7 +116,7 @@ public class AudioManager : MonoBehaviour
             case AudioType.SFX:
                 SetSFXVolume(volume);
                 break;
-            case AudioType.Music:
+            case AudioType.MUSIC:
                 SetMusicVolume(volume);
                 break;
         }

@@ -5586,6 +5586,8 @@ Transform:
   - {fileID: 1243429889}
   - {fileID: 1439984720}
   - {fileID: 1009846838}
+  - {fileID: 1792217871}
+  - {fileID: 890327026}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &155753751
@@ -7002,10 +7004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d882f42c2192a4042b2dc29dac3a7fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_sfxAudioData: {fileID: 0}
-  m_musicAudioData: {fileID: 0}
-  m_musicAudioSource: {fileID: 0}
-  m_sfxAudioSource: {fileID: 0}
+  m_musicAudioSource: {fileID: 971557783}
+  m_sfxAudioSource: {fileID: 534908634}
   defaultMusicVolume: 1
   defaultSFXVolume: 1
 --- !u!1001 &542223786
@@ -7524,6 +7524,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f72119263e837459dd528ba521ea53, type: 3}
+--- !u!1 &890327025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890327026}
+  - component: {fileID: 890327027}
+  m_Layer: 0
+  m_Name: CraftingController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890327026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890327025}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 155753750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890327027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890327025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed39ce6eaea0a604aa8cf6210d8a55a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Recipes:
+  - {fileID: 11400000, guid: 6d6a289faa3a4ab458db098d17074409, type: 2}
 --- !u!4 &894316329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5964313326514087902, guid: 0ecf261e505dfa649b9b94b719450cc9, type: 3}
@@ -8407,6 +8453,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9221826977439237919, guid: 7c0be212a310e324d9f1c3d0a9ab5182, type: 3}
   m_PrefabInstance: {fileID: 1023490758}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1023490760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5558368696182349939, guid: 7c0be212a310e324d9f1c3d0a9ab5182, type: 3}
+  m_PrefabInstance: {fileID: 1023490758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8553f877d429c06428ad172c02472fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053636659
 GameObject:
   m_ObjectHideFlags: 0
@@ -14292,6 +14349,7 @@ MonoBehaviour:
   shadows:
   - {fileID: 947563004}
   m_sanitySliderWindow: {fileID: 6477998742962387636, guid: b97f4e3b93a08744cad2f890f5082fa4, type: 3}
+  m_murmur: {fileID: 0}
 --- !u!4 &1439984720
 Transform:
   m_ObjectHideFlags: 0
@@ -14914,6 +14972,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3604954021427154081, guid: 50fff5eaaf978354ba27eacb51eedb8e, type: 3}
   m_PrefabInstance: {fileID: 2044113956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1792217870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792217871}
+  - component: {fileID: 1792217872}
+  m_Layer: 0
+  m_Name: CraftingStationController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1792217871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792217870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 155753750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1792217872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792217870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96f86dbe3f89cc4cb7b2a2319eec56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerInventoryController: {fileID: 0}
+  m_interactibleCraftStation:
+  - {fileID: 1023490760}
+  m_craftingWindow: {fileID: 8464913614768338083, guid: 1698b4636839aec49a3081e70de52082, type: 3}
 --- !u!4 &1799025835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7679479510096779179, guid: 05a887701af30614f819e1db804d10a1, type: 3}
@@ -16367,6 +16473,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32070042899093c4ebc66a7559bd607f, type: 3}
+--- !u!1 &2130993051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130993053}
+  - component: {fileID: 2130993052}
+  m_Layer: 0
+  m_Name: SceneAudioData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2130993052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130993051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79236a6c9fbd90b47a677a5f67849430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_musicName: {fileID: 11400000, guid: 137fd226b6df21c4381d519b3c6e696c, type: 2}
+  m_SFXName: {fileID: 0}
+--- !u!4 &2130993053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130993051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 95.72441, y: 0.8037853, z: 87.62016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2131780544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16674,18 +16826,42 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionId
       value: 6cb7e8de-cf38-4922-be57-41a3948e1f2e
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionId
+      value: 42920e94-b516-4967-a331-0f938cd053e2
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionId
+      value: e88530c8-4237-4e49-9e86-8e68bc340fb0
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
       value: 'Player/Inventory[/Keyboard/i]'
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
+      value: 'UI/Inventory[/Keyboard/i]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionName
+      value: 'UI/Interact[/Keyboard/e]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
@@ -16693,11 +16869,35 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1943844051}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1943844051}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1792217872}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
@@ -16705,11 +16905,35 @@ PrefabInstance:
       value: OnInventory
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseCraftingWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerControler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInputControler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CraftingStationController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2750426657796097956, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
@@ -17128,3 +17352,4 @@ SceneRoots:
   - {fileID: 1841126974}
   - {fileID: 190356334}
   - {fileID: 3267414}
+  - {fileID: 2130993053}

@@ -11,5 +11,5 @@ public class AudioData : ScriptableObject
         public AudioClip _audioClip;
 
     }
-    [field: SerializeField] public audioDataHelper[] audioClips;
+    [field: SerializeField] public audioDataHelper audioClip;
 }

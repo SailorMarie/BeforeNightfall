@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInventoryController : MonoBehaviour
 {
@@ -56,13 +57,34 @@ public class PlayerInventoryController : MonoBehaviour
     {
         if (m_currentInventoryWindow != null)
         {
+            EnablePlayerActionMap();
             m_currentInventoryWindow.Close();
             m_currentInventoryWindow = null;
         }
         else
         {
+            EnableUIActionMap();
             m_currentInventoryWindow = (InventoryWindow)UIManager.Instance.OpenWindow(m_inventoryWindow);
             m_currentInventoryWindow.Initialize(this);
         }
+    }
+
+    public Items GetItemAtIndex(int index)
+    {
+       return m_inventory.Keys.ToArray()[index];
+    }
+
+    public void EnablePlayerActionMap()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        InputSystem.actions.actionMaps[1].Disable();
+        InputSystem.actions.actionMaps[0].Enable();
+    }
+
+    public void EnableUIActionMap()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        InputSystem.actions.actionMaps[0].Disable();
+        InputSystem.actions.actionMaps[1].Enable();
     }
 }

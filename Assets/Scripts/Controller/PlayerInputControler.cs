@@ -38,27 +38,32 @@ public class PlayerInputControler : MonoBehaviour
             m_Inventory = m_inputAction.FindAction("Inventory");
             if (m_Inventory.WasPressedThisFrame())
             {
+                
                 PlayerManager.Instance.ShowInventory();
             }
 
         }
     }
 
+    
+
     public void OnMove(InputAction.CallbackContext context)
     {
         m_movementInput = context.ReadValue<Vector2>();
         m_isMoving = m_movementInput != Vector2.zero;
         m_jumpAction = context.ReadValue<Vector2>();
-        
+
 
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-  
+
         m_jumpAction = context.ReadValue<Vector2>();
-        
+
     }
+
+
 
     private void FixedUpdate()
     {
