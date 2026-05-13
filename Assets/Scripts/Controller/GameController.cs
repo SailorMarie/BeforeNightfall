@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour
     public PlayerManager playerManager { private set; get; }
     public CraftingStationController craftingStationController { private set; get; }
     public CraftingController craftingController { private set; get; }
+
+    public PauseWindowController pauseWindowController { private set; get; }
+    public EndGameController endGameController { private set; get; }
     
 
     private void Awake()
@@ -19,14 +22,16 @@ public class GameController : MonoBehaviour
         sanityController = GetComponentInChildren<SanityController>();
         craftingStationController = GetComponentInChildren<CraftingStationController>();
         craftingController = GetComponentInChildren<CraftingController>();
-        
+        endGameController = GetComponentInChildren<EndGameController>();
+        pauseWindowController = GetComponentInChildren<PauseWindowController>();
 
         cabinTeleportController?.SetDependencies(this);
         respawnController?.SetDependencies(this);
         sanityController?.SetDependencies(this);
         craftingStationController?.SetDependencies(this);
         craftingController?.SetDependencies(this);
-
+        endGameController?.SetDependencies(this);
+        pauseWindowController?.SetDependencies(this);
 
     }
 
@@ -37,7 +42,8 @@ public class GameController : MonoBehaviour
         sanityController?.Init();
         craftingStationController?.Init();
         craftingController?.Init();
-        
+        endGameController?.Init();
+        pauseWindowController?.Init();
         
     }
 }

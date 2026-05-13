@@ -18,6 +18,7 @@ public class PlayerInputControler : MonoBehaviour
     private bool m_canJump;
     private InputAction m_interact;
     private InputAction m_Inventory;
+    
 
     private LayerMask m_craftableLayer;
 
@@ -28,6 +29,7 @@ public class PlayerInputControler : MonoBehaviour
         m_body = GetComponent<Rigidbody>();    
         m_inputAction = InputSystem.actions;
         m_interact = m_inputAction.FindAction("Interact");
+        
 
     }
 
