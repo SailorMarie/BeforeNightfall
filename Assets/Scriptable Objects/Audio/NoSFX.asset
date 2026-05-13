@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711d45818b812ef4794f185df2b16f9e, type: 3}
   m_Name: NoSFX
   m_EditorClassIdentifier: 
-  audioClips: []
+  audioClip:
+    _audioName: None
+    _audioClip: {fileID: 0}

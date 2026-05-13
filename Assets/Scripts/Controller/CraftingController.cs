@@ -60,6 +60,10 @@ public class CraftingController : MonoBehaviour
                 m_craftingStationController.CraftResultSelected?.Invoke(recipe.m_result);
                 break;
             }
+            else
+            {
+                Debug.Log("Cant craft");
+            }
         }
     }
 
@@ -70,6 +74,11 @@ public class CraftingController : MonoBehaviour
             PlayerManager.Instance.RemoveItem(m_currentRecipe.m_ingredients[i]);
         }
 
+        m_craftingStationController.OnInventoryRefresh?.Invoke();
+        m_craftingStationController.FirstIngredientUnselected?.Invoke();
+        m_craftingStationController.SecondIngredientUnselected?.Invoke();
+        m_firstIngredient = null;
+        m_secondIngredient = null;
         PlayerManager.Instance.CraftingItem(m_currentRecipe.m_result, posCraftable + craftingHeight);
         
     }

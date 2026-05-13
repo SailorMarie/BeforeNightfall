@@ -57,6 +57,10 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogError($"Music not found : {audioData.name}");
         }
+        else if (audioData.audioClip._audioName == "None")
+        {
+            return;
+        }
         else if (audioData.audioClip._audioName == null)
         {
             Debug.LogError($"Music clip missing : {audioData.audioClip._audioName}");
@@ -75,6 +79,10 @@ public class AudioManager : MonoBehaviour
         if (audioData.IsUnityNull())
         {
             Debug.Log($"SFX not found : {audioData.name}");
+        }
+        else if(audioData.audioClip._audioName == "None")
+        {
+            return;
         }
         else if (audioData.audioClip._audioClip == null)
         {

@@ -8,6 +8,7 @@ public class EnumWindows : ScriptableObject
         Hud,
         Inventory,
         PauseMenu,
+        Tutorial,
     }
 
     [field: SerializeField] public WindowLayers Layer;

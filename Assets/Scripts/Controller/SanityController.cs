@@ -26,7 +26,7 @@ public class SanityController : MonoBehaviour
     private int m_division = 100;
     private float m_sanity = 100;
     private float m_maxSanity = 100;
-    private bool m_firstTimeOnLostSanity = false;
+    [SerializeField] private SanityData m_firstTimeOnLostSanity;
     
     public Action OnSanityLostStart;
     public Action OnSanityLostStop;
@@ -61,7 +61,7 @@ public class SanityController : MonoBehaviour
         {
             shadow.Init(this);
         }
-        if (m_firstTimeOnLostSanity)
+        if (m_firstTimeOnLostSanity.normalSanity)
         {
             m_sanityLostRate = 0.25f;
             m_fadeSpeed = m_sanityLostRate;
@@ -100,7 +100,6 @@ public class SanityController : MonoBehaviour
             //screen tout noire, reload de la scene
             m_sanity = 0;
             m_sanityLostRate = 0.25f;
-            m_firstTimeOnLostSanity = true;
             SceneLoaderManager.Instance.LoadScene(GAME_SCENE);
 
         }

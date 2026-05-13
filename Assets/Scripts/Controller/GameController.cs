@@ -34,9 +34,9 @@ public class GameController : MonoBehaviour
     {
         cabinTeleportController?.Init();
         respawnController?.Init();
-        sanityController.Init();
-        craftingStationController.Init();
-        craftingController.Init();
+        sanityController?.Init();
+        craftingStationController?.Init();
+        craftingController?.Init();
         
         
     }

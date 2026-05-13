@@ -23,18 +23,25 @@ public class CraftingWindow : Window
     {
         m_craftingStationController = craftingStationController;
         
-        int index = 0;
-        foreach (var item in craftingStationController.m_playerInventoryController.GetAllItemsInInventory())
-        {
-            m_inventorySlot[index].image.sprite = item.Sprite;
-            m_inventorySlot[index].interactable = true;
-            index++;
-        }
+        RefreshDisplay();
+
         m_craftingStationController.FirstIngredientSelected += OnFirstIngredientSelected;
         m_craftingStationController.FirstIngredientUnselected += OnFirstIngredientUnselected;
         m_craftingStationController.SecondIngredientSelected += OnSecondIngredientSelected;
         m_craftingStationController.SecondIngredientUnselected += OnSecondIngredientUnselected;
         m_craftingStationController.CraftResultSelected += UpdateResult;
+        m_craftingStationController.OnInventoryRefresh += RefreshDisplay;
+    }
+
+    public void RefreshDisplay()
+    {
+        int index = 0;
+        foreach (var item in m_craftingStationController.m_playerInventoryController.GetAllItemsInInventory())
+        {
+            m_inventorySlot[index].image.sprite = item.Sprite;
+            m_inventorySlot[index].interactable = true;
+            index++;
+        }
     }
 
     private void OnDestroy()
@@ -44,6 +51,7 @@ public class CraftingWindow : Window
         m_craftingStationController.SecondIngredientSelected -= OnSecondIngredientSelected;
         m_craftingStationController.SecondIngredientUnselected -= OnSecondIngredientUnselected;
         m_craftingStationController.CraftResultSelected -= UpdateResult;
+        m_craftingStationController.OnInventoryRefresh -= RefreshDisplay;
     }
     
 

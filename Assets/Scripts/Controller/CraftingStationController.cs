@@ -22,6 +22,7 @@ public class CraftingStationController : MonoBehaviour
     public Action<Items> SecondIngredientSelected;
     public Action SecondIngredientUnselected;
     public Action<Items> CraftResultSelected;
+    public Action OnInventoryRefresh;
 
     public void SetDependencies(GameController gameController)
     {
