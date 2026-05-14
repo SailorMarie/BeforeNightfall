@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class LoadingScene : MonoBehaviour
 {
-    [SerializeField] private Image m_Background;
+    [SerializeField] private GameObject m_Background;
 
     private void Start()
     {
@@ -13,7 +13,7 @@ public class LoadingScene : MonoBehaviour
     public async void LoadLevel(string SceneToLoad)
     {
         AsyncOperation loadOp = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(SceneToLoad);
-        m_Background.enabled = true;
+        m_Background.SetActive(true);
         loadOp.allowSceneActivation = false;
 
         while (!loadOp.isDone)
@@ -27,7 +27,7 @@ public class LoadingScene : MonoBehaviour
         }
         if(m_Background != null)
         {
-            m_Background.enabled = false;
+            m_Background.SetActive(false);
         }
 
     }   
