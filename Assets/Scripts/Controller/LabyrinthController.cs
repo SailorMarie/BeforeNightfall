@@ -1,13 +1,11 @@
 using System.Collections;
-using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class LabyrinthController : MonoBehaviour
 {
     [SerializeField] private Items m_forestKeyItem;
     [SerializeField] private LabyrinthWindow m_labyrinthWindow;
-    [SerializeField] private SceneAsset m_sceneAsset;
+    [SerializeField] private string m_sceneAsset;
     private LabyrinthWindow m_currentLabyrinthWindow;
 
     private PlayerInventoryController m_playerInventoryController;
@@ -15,10 +13,10 @@ public class LabyrinthController : MonoBehaviour
 
     public void SetDependencies(GameController gameController)
     {
-        m_playerInventoryController = gameController.playerManager.m_inventory;
     }
     public void Init()
     {
+        m_playerInventoryController = PlayerManager.Instance.m_inventory;
 
         StartCoroutine(WaitForItemToBePickUp());
     }
@@ -42,7 +40,7 @@ public class LabyrinthController : MonoBehaviour
             elapse += Time.deltaTime;
             yield return null;
         }
-        SceneLoaderManager.Instance.LoadScene(m_sceneAsset.name);
+        SceneLoaderManager.Instance.LoadScene(m_sceneAsset);
         m_currentLabyrinthWindow.Close();
 
     }

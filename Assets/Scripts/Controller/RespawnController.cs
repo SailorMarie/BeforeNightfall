@@ -13,13 +13,13 @@ public class RespawnController : MonoBehaviour
 
     public void SetDependencies(GameController gameController)
     {
-        m_playerManager = gameController.playerManager;
         m_gameController = gameController;
 
     }
 
     public void Init()
     {
+        m_playerManager = PlayerManager.Instance;
         OnRespawnPointReach += Respawn;
         foreach (RespawnTeleporter teleporter in m_respawnZone)
         {

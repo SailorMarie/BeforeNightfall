@@ -14,11 +14,11 @@ public class CraftingController : MonoBehaviour
     public void SetDependencies(GameController gameController)
     {
         m_craftingStationController = gameController.craftingStationController;
-        m_playerInventoryController = gameController.playerManager.m_inventory;
     }
 
     public void Init()
     {
+        m_playerInventoryController = PlayerManager.Instance.m_inventory;
         m_craftingStationController.OnIngredientSelected += AddIngredient;
         m_craftingStationController.OnCraftButtonPressed += Craft;
     }

@@ -26,12 +26,12 @@ public class CraftingStationController : MonoBehaviour
 
     public void SetDependencies(GameController gameController)
     {
-        m_playerInventoryController = gameController.playerManager.m_inventory;
         m_craftingController = gameController.craftingController;
     }
 
     public void Init()
     {
+        m_playerInventoryController = PlayerManager.Instance.m_inventory;
         foreach(var interactibleCraftStation in m_interactibleCraftStation)
         {
             interactibleCraftStation.Init(this);
@@ -61,6 +61,10 @@ public class CraftingStationController : MonoBehaviour
 
     public void Interact(InteractibleCraftStation currentCraftingStationPosition)
     {
+        if (m_playerInventoryController == null)     
+        {
+            m_playerInventoryController = PlayerManager.Instance.m_inventory;
+        }
         m_playerHasItems = true;
         if (m_currentCraftingWindow != null)
         {

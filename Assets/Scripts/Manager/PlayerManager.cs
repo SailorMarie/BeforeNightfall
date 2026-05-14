@@ -8,17 +8,17 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public PlayerInventoryController m_inventory;
     [SerializeField] private Transform m_player;
 
-    void Start()
+    public void Awake()
     {
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+            DontDestroyOnLoad(gameObject);
     }
 
     public void AddItem(Items itemToAdd)

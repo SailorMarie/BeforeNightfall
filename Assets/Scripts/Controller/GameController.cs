@@ -13,11 +13,13 @@ public class GameController : MonoBehaviour
     public EndGameController endGameController { private set; get; }
     public LabyrinthController labyrinthController { private set; get; }
     public ToCabinController ToCabinController { private set; get; }
-    
+
+    public ForestController forestController { private set; get; }
+
 
     private void Awake()
     {
-        playerManager = GetComponentInChildren<PlayerManager>();
+        playerManager = PlayerManager.Instance;
         cabinTeleportController = GetComponentInChildren<CabinTeleportController>();
         respawnController = GetComponentInChildren<RespawnController>();
         sanityController = GetComponentInChildren<SanityController>();
@@ -27,6 +29,7 @@ public class GameController : MonoBehaviour
         pauseWindowController = GetComponentInChildren<PauseWindowController>();
         labyrinthController = GetComponentInChildren<LabyrinthController>();
         ToCabinController = GetComponentInChildren<ToCabinController>();
+        forestController = GetComponentInChildren<ForestController>();
 
         cabinTeleportController?.SetDependencies(this);
         respawnController?.SetDependencies(this);
@@ -37,6 +40,7 @@ public class GameController : MonoBehaviour
         pauseWindowController?.SetDependencies(this);
         labyrinthController?.SetDependencies(this);
         ToCabinController?.SetDependencies(this);
+        forestController?.SetDependencies(this);
     }
 
     private void Start()
@@ -50,5 +54,6 @@ public class GameController : MonoBehaviour
         pauseWindowController?.Init();
         labyrinthController?.Init();
         ToCabinController?.Init();
+        forestController?.Init();
     }
 }
