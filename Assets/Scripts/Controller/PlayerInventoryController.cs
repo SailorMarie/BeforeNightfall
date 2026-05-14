@@ -10,6 +10,10 @@ public class PlayerInventoryController : MonoBehaviour
     [SerializeField] private Window m_inventoryWindow;
     private InventoryWindow m_currentInventoryWindow;
 
+    public void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
     public void AddItem(Items item)
     {
         if(!m_inventory.ContainsKey(item))

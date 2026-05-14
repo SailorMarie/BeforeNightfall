@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cabin_Music_Data
   m_EditorClassIdentifier: 
   audioClip:
-    _audioName: Quiet
-    _audioClip: {fileID: 8300000, guid: 223d664661b5124448dc1dff58a93851, type: 3}
+    _audioName: Cabin
+    _audioClip: {fileID: 8300000, guid: 89faac8759464e74487112e3af61c6a6, type: 3}
