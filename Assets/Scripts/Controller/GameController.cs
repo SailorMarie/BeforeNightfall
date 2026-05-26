@@ -9,12 +9,12 @@ public class GameController : MonoBehaviour
     public PlayerManager playerManager { private set; get; }
     public CraftingStationController craftingStationController { private set; get; }
     public CraftingController craftingController { private set; get; }
-  public PauseWindowController pauseWindowController { private set; get; }
+    public PauseWindowController pauseWindowController { private set; get; }
     public EndGameController endGameController { private set; get; }
     public LabyrinthController labyrinthController { private set; get; }
     public ToCabinController ToCabinController { private set; get; }
-
     public ForestController forestController { private set; get; }
+    public CameraEffectController cameraEffectController { private set; get; }
 
 
     private void Awake()
@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
         labyrinthController = GetComponentInChildren<LabyrinthController>();
         ToCabinController = GetComponentInChildren<ToCabinController>();
         forestController = GetComponentInChildren<ForestController>();
+        cameraEffectController = GetComponentInChildren<CameraEffectController>();
 
         cabinTeleportController?.SetDependencies(this);
         respawnController?.SetDependencies(this);
@@ -41,6 +42,7 @@ public class GameController : MonoBehaviour
         labyrinthController?.SetDependencies(this);
         ToCabinController?.SetDependencies(this);
         forestController?.SetDependencies(this);
+        cameraEffectController?.SetDependencies(this);
     }
 
     private void Start()
@@ -55,5 +57,6 @@ public class GameController : MonoBehaviour
         labyrinthController?.Init();
         ToCabinController?.Init();
         forestController?.Init();
+        cameraEffectController?.Init();
     }
 }

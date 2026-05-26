@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
     private InputActionAsset _actionFile;
     private InputAction _cameraMovement;
     private Transform _followTarget;
+    [SerializeField] private float m_sensitivity;
     [SerializeField] private float m_rotationSpeed;
     [Tooltip("Please make sure the bottom clamp value is under the top clamp value")]
     [SerializeField] private float m_bottomClamp;
@@ -39,8 +40,8 @@ public class CameraFollow : MonoBehaviour
     {
         Vector2 camAmt = _cameraMovement.ReadValue<Vector2>();
 
-        cinemachineTargetPitch = UpdateRotation(cinemachineTargetPitch, camAmt.y, m_bottomClamp, m_topClamp, true);
-        cinemachineTargetYaw = UpdateRotation(cinemachineTargetYaw, camAmt.x, float.MinValue, float.MaxValue, false);
+        cinemachineTargetPitch = UpdateRotation(cinemachineTargetPitch, camAmt.y * m_sensitivity, m_bottomClamp, m_topClamp, true);
+        cinemachineTargetYaw = UpdateRotation(cinemachineTargetYaw, camAmt.x * m_sensitivity, float.MinValue, float.MaxValue, false);
 
         ApplyRotation(cinemachineTargetPitch, cinemachineTargetYaw);
     }
