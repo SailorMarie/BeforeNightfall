@@ -1070,30 +1070,8 @@
                 },
                 {
                     "name": "",
-                    "id": "117214c4-be1b-4108-8263-8147b7ce3b78",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c075b921-cc0e-42e5-b1f2-852bd043d411",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f20f28cd-a22b-4e11-81a2-1ec43d08d988",
-                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
