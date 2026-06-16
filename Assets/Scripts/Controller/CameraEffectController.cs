@@ -35,8 +35,7 @@ public class CameraEffectController : MonoBehaviour
     {
         m_sanityController.vignetteChanged += DoEffect;
         m_sanityController.chromChanged += DoEffect;
-        m_sanityController.vignetteChanged += StopEffect;
-        m_sanityController.chromChanged += StopEffect;
+        
         
         m_fadeSpeed = m_sanityController.m_sanityLostRate;
             
