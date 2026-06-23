@@ -36,6 +36,11 @@ public class CraftingWindow : Window
     public void RefreshDisplay()
     {
         int index = 0;
+        foreach(var slot in m_inventorySlot)
+        {
+            slot.image.sprite = null;
+            slot.interactable = false;
+        }
         foreach (var item in m_craftingStationController.m_playerInventoryController.GetAllItemsInInventory())
         {
             m_inventorySlot[index].image.sprite = item.Sprite;
@@ -58,6 +63,7 @@ public class CraftingWindow : Window
     public void OnIngredientPressed(int ingredientIndex)
     {
         m_craftingStationController.OnIngredientSelected?.Invoke(ingredientIndex);
+        
     }
 
     public void OnCraftButtonPressed()
@@ -65,32 +71,46 @@ public class CraftingWindow : Window
         m_craftingStationController.OnCraftButtonPressed?.Invoke(m_craftingStationController.m_currentCraftingStation.transform.position, m_craftingTableHeight);
     }
 
-    public void OnFirstIngredientSelected(Items item)
+    public void OnFirstIngredientSelected(Items item,int itemIndex)
     {
         m_firstIngredient.sprite = item.Sprite;
         m_ingredientSelected.sprite = item.Sprite;
         m_ingredientDescription.text = item.Description;
+        m_inventorySlot[itemIndex].animator.SetBool("Glow", true);
+
     }
-    public void OnFirstIngredientUnselected()
+    public void OnFirstIngredientUnselected(int itemIndex)
     {
         m_firstIngredient.sprite = null;
         m_ingredientSelected.sprite = null;
         m_ingredientDescription.text = "";
+        m_inventorySlot[itemIndex].animator.SetBool("Glow", false);
     }
-    public void OnSecondIngredientSelected(Items item)
+    public void OnSecondIngredientSelected(Items item,int itemIndex)
     {
+        
         m_secondIngredient.sprite = item.Sprite;
         m_ingredientSelected.sprite = item.Sprite;
         m_ingredientDescription.text = item.Description;
+        m_inventorySlot[itemIndex].animator.SetBool("Glow", true);
+
     }
-    public void OnSecondIngredientUnselected()
+    public void OnSecondIngredientUnselected(int itemIndex)
     {
         m_secondIngredient.sprite = null;
         m_ingredientSelected.sprite = null;
         m_ingredientDescription.text = "";
+        m_inventorySlot[itemIndex].animator.SetBool("Glow", false);
     }
     public void UpdateResult(Items item)
     {
+        if(item == null)
+        {
+            m_result.sprite = null;
+            m_craftResult.sprite = null;
+            m_resultDescription.text = "";
+            return;
+        }
         m_result.sprite = item.Sprite;
         m_craftResult.sprite = item.Sprite;
         m_resultDescription.text = item.Description;

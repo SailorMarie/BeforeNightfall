@@ -17,10 +17,10 @@ public class CraftingStationController : MonoBehaviour
     public Action<int> OnIngredientSelected;
     public Action<Vector3, Vector3> OnCraftButtonPressed;
 
-    public Action<Items> FirstIngredientSelected;
-    public Action FirstIngredientUnselected;
-    public Action<Items> SecondIngredientSelected;
-    public Action SecondIngredientUnselected;
+    public Action<Items,int> FirstIngredientSelected;
+    public Action<int> FirstIngredientUnselected;
+    public Action<Items,int> SecondIngredientSelected;
+    public Action<int> SecondIngredientUnselected;
     public Action<Items> CraftResultSelected;
     public Action OnInventoryRefresh;
 

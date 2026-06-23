@@ -33,7 +33,7 @@ public class PlayerInventoryController : MonoBehaviour
 
     public Items[] GetAllItemsInInventory()
     {
-        return m_inventory.Keys.ToArray();
+        return m_inventory.Keys.Where(x=> m_inventory[x] > 0).ToArray();
     }
 
     public bool HasItem(Items item)
@@ -53,8 +53,7 @@ public class PlayerInventoryController : MonoBehaviour
 
     public void CraftingItem(Items item, Vector3 spawnPosition)
     {
-        Instantiate(item.Prefab, spawnPosition, Quaternion.identity);
-        AddItem(item);
+        Instantiate(item.Prefab, spawnPosition, Quaternion.identity);   
     }
 
     public void ShowInventory()
@@ -75,7 +74,12 @@ public class PlayerInventoryController : MonoBehaviour
 
     public Items GetItemAtIndex(int index)
     {
-       return m_inventory.Keys.ToArray()[index];
+       return m_inventory.Keys.Where(x => m_inventory[x] > 0).ToArray()[index];
+    }
+
+    public int GetItemIndex(Items item)
+    {
+        return m_inventory.Keys.ToList().IndexOf(item);
     }
 
     public void EnablePlayerActionMap()

@@ -29,28 +29,28 @@ public class CraftingController : MonoBehaviour
         if(m_firstIngredient == null)
         {
             m_firstIngredient = m_playerInventoryController.GetItemAtIndex(ingredientIndex);
-            m_craftingStationController.FirstIngredientSelected?.Invoke(m_firstIngredient);
+            m_craftingStationController.FirstIngredientSelected?.Invoke(m_firstIngredient, ingredientIndex);
         }
         else if(m_firstIngredient == m_playerInventoryController.GetItemAtIndex(ingredientIndex))
         {
             m_firstIngredient = null;
-            m_craftingStationController.FirstIngredientUnselected?.Invoke();   
+            m_craftingStationController.FirstIngredientUnselected?.Invoke(ingredientIndex);   
         }
         else if(m_secondIngredient == null)
         {
             m_secondIngredient = m_playerInventoryController.GetItemAtIndex(ingredientIndex);
-            m_craftingStationController.SecondIngredientSelected?.Invoke(m_secondIngredient);
+            m_craftingStationController.SecondIngredientSelected?.Invoke(m_secondIngredient, ingredientIndex);
         }
         else if(m_secondIngredient == m_playerInventoryController.GetItemAtIndex(ingredientIndex))
         {
             m_secondIngredient = null;
-            m_craftingStationController.SecondIngredientUnselected?.Invoke();
+            m_craftingStationController.SecondIngredientUnselected?.Invoke(ingredientIndex);
         }
 
         CheckRecipes();
     }
 
-    private void CheckRecipes()
+    private bool CheckRecipes()
     {
         foreach( var recipe in m_Recipes)
         {
@@ -58,28 +58,36 @@ public class CraftingController : MonoBehaviour
             {
                 m_currentRecipe = recipe;
                 m_craftingStationController.CraftResultSelected?.Invoke(recipe.m_result);
-                break;
+                return true;
             }
             else
             {
+                m_craftingStationController.CraftResultSelected?.Invoke(null);
                 Debug.Log("Cant craft");
             }
         }
+        return false;
     }
 
     private void Craft(Vector3 posCraftable, Vector3 craftingHeight)
     {
-        for (int i = 0; i < m_currentRecipe.m_ingredients.Count; i++)
+        if (CheckRecipes())
         {
-            PlayerManager.Instance.RemoveItem(m_currentRecipe.m_ingredients[i]);
-        }
+            m_craftingStationController.FirstIngredientUnselected?.Invoke( m_playerInventoryController.GetItemIndex(m_currentRecipe.m_ingredients[0]));
+            m_craftingStationController.SecondIngredientUnselected?.Invoke(m_playerInventoryController.GetItemIndex(m_currentRecipe.m_ingredients[1]));
+            
+            PlayerManager.Instance.RemoveItem(m_currentRecipe.m_ingredients[0]);
+            PlayerManager.Instance.RemoveItem(m_currentRecipe.m_ingredients[1]);
 
-        m_craftingStationController.OnInventoryRefresh?.Invoke();
-        m_craftingStationController.FirstIngredientUnselected?.Invoke();
-        m_craftingStationController.SecondIngredientUnselected?.Invoke();
-        m_firstIngredient = null;
-        m_secondIngredient = null;
-        PlayerManager.Instance.CraftingItem(m_currentRecipe.m_result, posCraftable + craftingHeight);
+            m_craftingStationController.OnInventoryRefresh?.Invoke();
+     
+            m_firstIngredient = null;
+            m_secondIngredient = null;
+            
+            m_craftingStationController.CraftResultSelected?.Invoke(null);
+            PlayerManager.Instance.CraftingItem(m_currentRecipe.m_result, posCraftable + craftingHeight);
+
+        }
         
     }
 }
