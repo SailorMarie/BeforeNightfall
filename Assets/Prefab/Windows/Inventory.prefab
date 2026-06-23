@@ -508,6 +508,9 @@ MonoBehaviour:
   - {fileID: 2123357333698881431}
   - {fileID: 1054529838862783993}
   - {fileID: 5285663839876153332}
+  m_selectedItemIcon: {fileID: 4851742022289582700}
+  m_selectedItemName: {fileID: 7351375814426824672}
+  m_selectedItemDescription: {fileID: 202220607488124700}
 --- !u!1 &3247711759880276834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1158,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_02
       objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1283,6 +1302,22 @@ PrefabInstance:
     - target: {fileID: 3541557147241501912, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
       propertyPath: m_Name
       value: Button_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1413,6 +1448,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1541,6 +1592,22 @@ PrefabInstance:
     - target: {fileID: 3541557147241501912, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
       propertyPath: m_Name
       value: Button_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1671,6 +1738,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_04
       objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1799,6 +1882,22 @@ PrefabInstance:
     - target: {fileID: 3541557147241501912, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
       propertyPath: m_Name
       value: Button_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1941,6 +2040,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4a6d13b4adff97e4d800a522afb4a338, type: 3}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2070,6 +2181,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_07
       objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2198,6 +2325,22 @@ PrefabInstance:
     - target: {fileID: 3541557147241501912, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
       propertyPath: m_Name
       value: Button_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8277449067832444650}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ItemClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976548181919618574, guid: f7eb6590611205f49a09b2394a5a5082, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
