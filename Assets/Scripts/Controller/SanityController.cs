@@ -21,8 +21,8 @@ public class SanityController : MonoBehaviour
     
     public Action OnSanityLostStart;
     public Action OnSanityLostStop;
-    public Action vignetteChanged;
-    public Action chromChanged;
+  
+    
 
     private Coroutine m_lostSanityCoroutine = null;
 
@@ -61,8 +61,7 @@ public class SanityController : MonoBehaviour
 
     public void LostSanityStart()
     {
-        vignetteChanged?.Invoke();
-        chromChanged?.Invoke();
+        
         m_lostSanityCoroutine = StartCoroutine(LostSanityCoroutine());
         AudioManager.Instance.PlayAudio(AudioManager.AudioType.SFX, m_murmur);
     }
