@@ -12,6 +12,7 @@ public class LoadingScene : MonoBehaviour
 
     public async void LoadLevel(string SceneToLoad)
     {
+        LevelManager.Instance.AddLevel(SceneToLoad);
         AsyncOperation loadOp = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(SceneToLoad);
         m_Background.SetActive(true);
         loadOp.allowSceneActivation = false;

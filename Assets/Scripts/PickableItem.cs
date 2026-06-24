@@ -5,11 +5,11 @@ using UnityEngine;
 public class PickableItem : MonoBehaviour
 {
     [SerializeField] public Items m_item;
-    private Renderer m_renderer;
+    private Renderer[] m_renderer;
 
     private void Start()
     {
-        m_renderer = GetComponent<Renderer>();
+        m_renderer = GetComponentsInChildren<Renderer>();
     }
     public void Interact()
     {
@@ -19,14 +19,21 @@ public class PickableItem : MonoBehaviour
 
     public void UnHighlight()
     {
-        if (m_renderer.materials.Length > 1)
+        foreach(Renderer renderer in m_renderer)
         {
-            m_renderer.materials = new Material[] { m_renderer.materials[0] };
+            if (renderer.materials.Length > 1)
+            {
+                renderer.materials = new Material[] { renderer.materials[0] };
+            }
+
         }
     }
 
     public void Highlight(Material m_objectHightlightMaterial)
     {
-        m_renderer.materials = new Material[] { m_renderer.materials[0], m_objectHightlightMaterial };
+        foreach (Renderer renderer in m_renderer)
+        {
+            renderer.materials = new Material[] { renderer.materials[0], m_objectHightlightMaterial };
+        }
     }
 }
