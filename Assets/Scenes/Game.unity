@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3267414}
+  - component: {fileID: 3267415}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -155,6 +156,18 @@ Transform:
   - {fileID: 59829850}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3267415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3267413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9478ce6e323ac0741922bb2cc3eee10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3901745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2908173736270549603, guid: 76f72119263e837459dd528ba521ea53, type: 3}
@@ -8510,6 +8523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a1c9315d464c344bb4677329b1e9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_tutoWindow: {fileID: 4669175017777551213, guid: 0ebc2302c54be904c947dc229244d88f, type: 3}
 --- !u!1001 &1006642429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13427,6 +13441,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_ActionId
+      value: aac66c48-a007-42ca-8f52-40f9ae4c1d85
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_ActionName
+      value: 'Player/ClosePopUp[/Keyboard/f]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1792217872}
@@ -13438,6 +13472,26 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[23].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1804818018}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 995982002}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePopUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameSceneLevelController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 327050750477723808, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 402188530253986493, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: m_topClamp
       value: 70
