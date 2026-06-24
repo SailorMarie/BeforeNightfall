@@ -1,3 +1,4 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,7 @@ public class PlayerInputControler : MonoBehaviour
     [SerializeField]private float m_speed;
     [SerializeField]private int m_jumpForce;
     [SerializeField]private int m_maxDistance = 1000; //max distance du rayCast
+    [SerializeField] private Material m_objectHightlightMaterial;
     private const int DIRECTION = 10000;
    
     private Rigidbody m_body;
@@ -18,7 +20,7 @@ public class PlayerInputControler : MonoBehaviour
     private bool m_canJump;
     private InputAction m_interact;
     private InputAction m_Inventory;
-    
+    private PickableItem m_currentHighlight;
 
     private LayerMask m_craftableLayer;
 
@@ -95,11 +97,12 @@ public class PlayerInputControler : MonoBehaviour
         Debug.DrawRay(m_body.position, m_body.transform.forward * m_maxDistance, Color.green);
         if (Physics.Raycast(rayFromCamera, out hitInfo, m_maxDistance))
         {
+            HighLightPickable(hitInfo);
             if (m_interact.WasPressedThisFrame())
             {
                 if (hitInfo.transform.gameObject.layer == LayerMask.NameToLayer("Pickable"))
                 {
-                    hitInfo.transform.gameObject.GetComponent<PickableItem>().Interact();
+                    m_currentHighlight.Interact();
 
                     // collect le gameObject
                     //PlayerManager.Instance.AddItem(hitInfo.transform.gameObject.GetComponent<PickableItem>().m_item);
@@ -120,5 +123,24 @@ public class PlayerInputControler : MonoBehaviour
         
     }
 
-
+    private void HighLightPickable(RaycastHit hitInfo)
+    {
+        if (hitInfo.transform.gameObject.layer == LayerMask.NameToLayer("Pickable"))
+        {
+            if(m_currentHighlight != null && m_currentHighlight != hitInfo.transform.gameObject.GetComponent<PickableItem>())
+            {
+                m_currentHighlight.UnHighlight();
+            }
+            m_currentHighlight = hitInfo.transform.gameObject.GetComponent<PickableItem>();
+            m_currentHighlight.Highlight(m_objectHightlightMaterial);
+        }
+        else
+        {
+            if(m_currentHighlight != null)
+            {
+                m_currentHighlight.UnHighlight();
+                m_currentHighlight = null;
+            }
+        }
+    }
 }

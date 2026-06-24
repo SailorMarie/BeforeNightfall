@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1431f4932159a9047a42fc1f41435ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sensitivity: 0
   m_rotationSpeed: 10
   m_bottomClamp: -10
   m_topClamp: 70
@@ -413,3 +414,4 @@ MonoBehaviour:
   m_speed: 8
   m_jumpForce: 200
   m_maxDistance: 4
+  m_objectHightlightMaterial: {fileID: 2100000, guid: 6de3f8b70c946174b8bd5c985c7f140b, type: 2}
