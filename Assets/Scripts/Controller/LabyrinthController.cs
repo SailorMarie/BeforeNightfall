@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LabyrinthController : MonoBehaviour
 {
-    [SerializeField] private Items m_forestKeyItem;
-    [SerializeField] private LabyrinthWindow m_labyrinthWindow;
+    [SerializeField] private LabyrinthKeyItem m_labyrinthKeyItem;
+    [SerializeField] private PopUpWindow m_labyrinthWindow;
     [SerializeField] private string m_sceneAsset;
-    private LabyrinthWindow m_currentLabyrinthWindow;
+
+    public Action OnForestKeyPickUp;
+    private PopUpWindow m_currentLabyrinthWindow;
 
     private PlayerInventoryController m_playerInventoryController;
     private const float WAIT_TIME = 2f;
@@ -16,20 +20,25 @@ public class LabyrinthController : MonoBehaviour
     }
     public void Init()
     {
+        m_labyrinthKeyItem.Init(this);
         m_playerInventoryController = PlayerManager.Instance.m_inventory;
+        OnForestKeyPickUp += LeaveForest;
 
-        StartCoroutine(WaitForItemToBePickUp());
-    }
-    private IEnumerator WaitForItemToBePickUp()
-    {
-        while (!m_playerInventoryController.HasItem(m_forestKeyItem))
+        if (!LevelManager.Instance.IsFirstTimeLevelLoaded(SceneManager.GetActiveScene().name))
         {
-            yield return null;  
+           LeaveForest();
         }
-            m_currentLabyrinthWindow = (LabyrinthWindow)UIManager.Instance.OpenWindow(m_labyrinthWindow);
-            m_currentLabyrinthWindow.Init();
-            StartCoroutine(LoadForestAfterDelay());
-        
+
+    }
+   
+
+    private void LeaveForest()
+    {
+        OnForestKeyPickUp -= LeaveForest;
+
+        m_currentLabyrinthWindow = (PopUpWindow)UIManager.Instance.OpenWindow(m_labyrinthWindow);
+        m_currentLabyrinthWindow.Init();
+        StartCoroutine(LoadForestAfterDelay());
     }
     private IEnumerator LoadForestAfterDelay()
     {

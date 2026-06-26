@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public ForestController forestController { private set; get; }
     public CameraEffectController cameraEffectController { private set; get; }
 
+    public PopUpController popUpController { private set; get; }
     public LevelController levelController { private set; get; }
 
 
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
         forestController = GetComponentInChildren<ForestController>();
         cameraEffectController = GetComponentInChildren<CameraEffectController>();
         levelController = GetComponentInChildren<LevelController>();
+        popUpController = GetComponentInChildren<PopUpController>();
 
         cabinTeleportController?.SetDependencies(this);
         respawnController?.SetDependencies(this);
@@ -47,6 +49,7 @@ public class GameController : MonoBehaviour
         forestController?.SetDependencies(this);
         cameraEffectController?.SetDependencies(this);
         levelController?.SetDependencies(this);
+        popUpController?.SetDependencies(this);
     }
 
     private void Start()
@@ -63,5 +66,6 @@ public class GameController : MonoBehaviour
         forestController?.Init();
         cameraEffectController?.Init();
         levelController?.Init();
+        popUpController?.Init();
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LabyrinthWindow : Window
+public class PopUpWindow : Window
 {
     
 

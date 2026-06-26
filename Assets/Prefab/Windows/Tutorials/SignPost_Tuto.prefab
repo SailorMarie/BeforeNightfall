@@ -58,17 +58,72 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7259616362682199543}
     m_Modifications:
+    - target: {fileID: 481458899377436351, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 481458899377436351, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 481458899377436351, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
       propertyPath: m_text
       value: 'Press E to interact
 
         Press I for your Inventory
 
+        Press
+        F to close pop up windows
 
-        It''s
-        all about the balance
 
-        (Find the bones)'
+        It''s all about the balance
+
+        (Find
+        the bones)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239321949796792964, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180027004447414685, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180027004447414685, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180027004447414685, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5312853007646802569, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -120,11 +175,14 @@ PrefabInstance:
 
         Press I for your Inventory
 
+        Press
+        F to close pop up windows
 
-        It''s
-        all about the balance
 
-        (Find the bones)'
+        It''s all about the balance
+
+        (Find
+        the bones)'
       objectReference: {fileID: 0}
     - target: {fileID: 6660235780096041469, guid: a4ca365ca9ff1ae4cbbec705d1d0f49d, type: 3}
       propertyPath: m_SizeDelta.x

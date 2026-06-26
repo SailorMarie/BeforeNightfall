@@ -7,6 +7,5 @@ public abstract class LevelController : MonoBehaviour
 
     public abstract void Init();
 
-    public abstract void ClosePopUp(InputAction.CallbackContext context);
     
 }

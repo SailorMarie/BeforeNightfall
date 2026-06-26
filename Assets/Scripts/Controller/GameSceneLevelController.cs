@@ -6,30 +6,21 @@ public class GameSceneLevelController : LevelController
 {
     [SerializeField] Window m_tutoWindow;
 
-    
-    private Window m_currentWindow;
+    private PopUpController m_popUpController;
 
-    public override void ClosePopUp(InputAction.CallbackContext context)
-    {
-        if(context.performed && m_currentWindow != null)
-        {
-            m_currentWindow.Close();
-            m_currentWindow = null;
 
-        }
-    }
 
     public override void Init()
     {
         if (LevelManager.Instance.IsFirstTimeLevelLoaded(SceneManager.GetActiveScene().name))
         {
-            m_currentWindow= UIManager.Instance.OpenWindow(m_tutoWindow);
+            m_popUpController.OpenPopUp(m_tutoWindow);
         }
 
     }
 
     public override void SetDependencies(GameController gameController)
     {
-     
+     m_popUpController = gameController.popUpController;
     }
 }

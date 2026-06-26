@@ -1267,6 +1267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_teleportZone: {fileID: 786260005}
   m_destination: {fileID: 186741192}
+  m_popUpWindow: {fileID: 0}
 --- !u!65 &786260005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1782,6 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_teleportZone: {fileID: 1222945530}
   m_destination: {fileID: 1830273418}
+  m_popUpWindow: {fileID: 0}
 --- !u!65 &1222945530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1974,11 +1976,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2681727458225203314, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7826601984677990377, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1347428476}
   m_SourcePrefab: {fileID: 100100000, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}
+--- !u!1 &1347428470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7826601984677990377, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}
+  m_PrefabInstance: {fileID: 1347428469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1347428476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347428470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af79f33c64855414ca562fe2eba8dbe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_item: {fileID: 11400000, guid: b99342f9e56d17f42aad0c36a238356c, type: 2}
 --- !u!1 &1415937651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58f0455ffd807d4cadd90098600e54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_forestKeyItem: {fileID: 11400000, guid: b99342f9e56d17f42aad0c36a238356c, type: 2}
+  m_labyrinthKeyItem: {fileID: 1347428476}
   m_labyrinthWindow: {fileID: 1118684002576343, guid: 6e5d08683e27d6d4fa0d3e10fa2b5549, type: 3}
   m_sceneAsset: Game
 --- !u!1 &1598627238
@@ -2935,6 +2959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_teleportZone: {fileID: 1948549135}
   m_destination: {fileID: 244817109}
+  m_popUpWindow: {fileID: 0}
 --- !u!1 &1982841291
 GameObject:
   m_ObjectHideFlags: 0

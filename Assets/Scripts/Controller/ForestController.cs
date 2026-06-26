@@ -8,6 +8,7 @@ public class ForestController : MonoBehaviour
     [SerializeField] private EnterLabyrinthTrigger m_enterLabyrinthTrigger;
 
     [SerializeField] private WarningBeforeLabyrinthWindow m_warningBeforeLabyrinthWindow;
+    [SerializeField] private WarningBeforeLabyrinthWindow m_warningLabyrinthCompleteWindow;
     private WarningBeforeLabyrinthWindow m_currentWarningBeforeLabyrinthWindow;
 
     public Action OnPlayerEnterLabyrinthTrigger;
@@ -37,14 +38,22 @@ public class ForestController : MonoBehaviour
 
     public void TryEnterLabyrinth()
     {
-        if (m_inventoryController.HasItem(m_keyItemNeeded))
+        if(LevelManager.Instance.IsFirstTimeLevelLoaded(m_labyrinthScene))
         {
-            SceneLoaderManager.Instance.LoadScene(m_labyrinthScene);
+            if (m_inventoryController.HasItem(m_keyItemNeeded))
+            {
+                SceneLoaderManager.Instance.LoadScene(m_labyrinthScene);
+            }
+            else
+            {
+                m_currentWarningBeforeLabyrinthWindow = (WarningBeforeLabyrinthWindow)UIManager.Instance.OpenWindow(m_warningBeforeLabyrinthWindow);
+            }
         }
         else
         {
-            m_currentWarningBeforeLabyrinthWindow = (WarningBeforeLabyrinthWindow)UIManager.Instance.OpenWindow(m_warningBeforeLabyrinthWindow);
+            m_currentWarningBeforeLabyrinthWindow = (WarningBeforeLabyrinthWindow)UIManager.Instance.OpenWindow(m_warningLabyrinthCompleteWindow);
         }
+        
     }
 
     public void CloseWarning()

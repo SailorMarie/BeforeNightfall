@@ -11,7 +11,7 @@ public class PickableItem : MonoBehaviour
     {
         m_renderer = GetComponentsInChildren<Renderer>();
     }
-    public void Interact()
+    public virtual void Interact()
     {
         PlayerManager.Instance.AddItem(m_item);
         Destroy(gameObject);
