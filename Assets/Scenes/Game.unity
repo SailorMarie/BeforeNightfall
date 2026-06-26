@@ -8405,6 +8405,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1876692131}
+    - targetCorrespondingSourceObject: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1350035584}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
 --- !u!1 &974226560 stripped
@@ -9898,6 +9901,73 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fba6f107e60137045a4d8707859dd652, type: 3}
+--- !u!1 &1350035583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1350035584}
+  - component: {fileID: 1350035585}
+  - component: {fileID: 1350035586}
+  m_Layer: 0
+  m_Name: LockDoorTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1350035584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350035583}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.243, z: -0.464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 974226561}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1350035585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350035583}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2990446, y: 2.8987699, z: 1}
+  m_Center: {x: 0.48560372, y: -0.949383, z: -1.8456563e-14}
+--- !u!114 &1350035586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350035583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da2f6340ee97e640bfccadeca7f6c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_window: {fileID: 1118684002576343, guid: 39fc91a87fd8d45479161208df92b145, type: 3}
 --- !u!1 &1353305329
 GameObject:
   m_ObjectHideFlags: 0
