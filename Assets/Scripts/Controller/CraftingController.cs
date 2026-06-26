@@ -20,7 +20,15 @@ public class CraftingController : MonoBehaviour
     {
         m_playerInventoryController = PlayerManager.Instance.m_inventory;
         m_craftingStationController.OnIngredientSelected += AddIngredient;
+        m_craftingStationController.OnCraftingClose += ClearIngredient;
         m_craftingStationController.OnCraftButtonPressed += Craft;
+    }
+
+    private void ClearIngredient()
+    {
+        m_firstIngredient = null;
+        m_secondIngredient = null;
+        m_currentRecipe = null;
     }
 
     private void AddIngredient(int ingredientIndex)
@@ -63,7 +71,6 @@ public class CraftingController : MonoBehaviour
             else
             {
                 m_craftingStationController.CraftResultSelected?.Invoke(null);
-                Debug.Log("Cant craft");
             }
         }
         return false;

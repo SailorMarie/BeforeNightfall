@@ -23,6 +23,7 @@ public class CraftingStationController : MonoBehaviour
     public Action<int> SecondIngredientUnselected;
     public Action<Items> CraftResultSelected;
     public Action OnInventoryRefresh;
+    public Action OnCraftingClose;
 
     public void SetDependencies(GameController gameController)
     {
@@ -49,6 +50,7 @@ public class CraftingStationController : MonoBehaviour
 
                 if (m_currentCraftingWindow != null)
                 {
+                    OnCraftingClose?.Invoke();
                     m_playerInventoryController.EnablePlayerActionMap();
                     m_currentCraftingWindow.Close();
                     m_currentCraftingWindow = null;
