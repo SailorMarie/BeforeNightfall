@@ -17,4 +17,11 @@ public class PopUpTriggerZone : MonoBehaviour
             
         }
     }
+    private void OnDestroy()
+    {
+        if (m_CurrentWindow != null)
+        {
+            m_CurrentWindow.Close();
+        }
+    }
 }

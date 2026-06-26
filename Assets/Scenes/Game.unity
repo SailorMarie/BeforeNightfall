@@ -7802,73 +7802,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2622631822639975217, guid: 3507cdaaddde90c4f9d635811d1351c7, type: 3}
   m_PrefabInstance: {fileID: 840840318}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &842136845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 842136846}
-  - component: {fileID: 842136848}
-  - component: {fileID: 842136847}
-  m_Layer: 0
-  m_Name: DoorLockPopUpTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &842136846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842136845}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.364, y: 0.974, z: -0.372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 974226561}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &842136847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842136845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da2f6340ee97e640bfccadeca7f6c67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_window: {fileID: 1118684002576343, guid: 39fc91a87fd8d45479161208df92b145, type: 3}
---- !u!65 &842136848
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842136845}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.3946877, y: 2.3893723, z: 1}
-  m_Center: {x: -0.004506961, y: -0.609113, z: 2.931601e-15}
 --- !u!1001 &862774345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8472,9 +8405,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1876692131}
-    - targetCorrespondingSourceObject: {fileID: 2892156904109322808, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 842136846}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835cfd8576e48704cac813d1c43a66f1, type: 3}
 --- !u!1 &974226560 stripped
@@ -8712,6 +8642,10 @@ PrefabInstance:
       propertyPath: m_doorToDestroy
       value: 
       objectReference: {fileID: 974226560}
+    - target: {fileID: 8084493836826532836, guid: 577a7f21475374544b9741d6e0a71b3b, type: 3}
+      propertyPath: m_popUpToDestroy
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8084493836826532836, guid: 577a7f21475374544b9741d6e0a71b3b, type: 3}
       propertyPath: m_bones.Array.size
       value: 4
@@ -10401,6 +10335,7 @@ MonoBehaviour:
   m_keyItemNeeded: {fileID: 11400000, guid: ee2cc82bfba1a384598d42fd5e56b380, type: 2}
   m_enterLabyrinthTrigger: {fileID: 1430582753}
   m_warningBeforeLabyrinthWindow: {fileID: 7296114504603524100, guid: d4191baa87e91774a842a2d85beffba8, type: 3}
+  m_warningLabyrinthCompleteWindow: {fileID: 0}
 --- !u!1001 &1523468179
 PrefabInstance:
   m_ObjectHideFlags: 0

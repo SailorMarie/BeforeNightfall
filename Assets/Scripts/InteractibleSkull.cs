@@ -31,6 +31,7 @@ public class InteractibleSkull : Interactible
         {
             Destroy(m_doorToDestroy);
         }
+
     }
 
     private void UpdateVisual()
