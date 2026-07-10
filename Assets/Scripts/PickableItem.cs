@@ -1,19 +1,31 @@
 using System;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class PickableItem : MonoBehaviour
 {
+#if UNITY_EDITOR
+    [ContextMenu("CreateGUID")]
+    public void CreateGUID()
+    {
+        m_guid = GUID.Generate().ToString();
+    }
+#endif
     [SerializeField] public Items m_item;
     private Renderer[] m_renderer;
+    [SerializeField] public string m_guid;
+
 
     private void Start()
     {
+        
         m_renderer = GetComponentsInChildren<Renderer>();
     }
     public virtual void Interact()
     {
         PlayerManager.Instance.AddItem(m_item);
+        LevelManager.Instance.AddPickedUpItem(m_guid);
         Destroy(gameObject);
     }
 
@@ -36,4 +48,6 @@ public class PickableItem : MonoBehaviour
             renderer.materials = new Material[] { renderer.materials[0], m_objectHightlightMaterial };
         }
     }
+
+
 }

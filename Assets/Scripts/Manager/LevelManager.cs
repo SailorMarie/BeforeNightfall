@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 
     public static LevelManager Instance { private set; get; }
     private Dictionary<string, int> numberOfTimeLevelLoaded = new Dictionary<string, int>();
+    private List<string> m_pickedUpItem = new List<string>();
     public void Awake()
     {
         if (Instance == null)
@@ -41,5 +42,15 @@ public class LevelManager : MonoBehaviour
         {
             return true;
         }
+    }
+
+    public void AddPickedUpItem(string itemGUID)
+    {
+        m_pickedUpItem.Add(itemGUID);
+    }
+
+    public List<string> GetPickedUpItem()
+    {
+        return m_pickedUpItem;
     }
 }
