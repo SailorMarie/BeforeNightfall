@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameSceneLevelController : LevelController
 {
     [SerializeField] Window m_tutoWindow;
+    [SerializeField] Transform m_LabyrinthExit;
 
     private PopUpController m_popUpController;
 
@@ -15,6 +16,10 @@ public class GameSceneLevelController : LevelController
         if (LevelManager.Instance.IsFirstTimeLevelLoaded(SceneManager.GetActiveScene().name))
         {
             m_popUpController.OpenPopUp(m_tutoWindow);
+        }
+        else
+        {
+            PlayerManager.Instance.SetPlayerPosition(m_LabyrinthExit,m_LabyrinthExit.rotation);
         }
 
     }

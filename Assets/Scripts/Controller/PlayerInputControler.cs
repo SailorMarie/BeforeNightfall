@@ -31,7 +31,7 @@ public class PlayerInputControler : MonoBehaviour
         m_body = GetComponent<Rigidbody>();    
         m_inputAction = InputSystem.actions;
         m_interact = m_inputAction.FindAction("Interact");
-        
+        PlayerManager.Instance.SetPlayer(gameObject.transform);
 
     }
 

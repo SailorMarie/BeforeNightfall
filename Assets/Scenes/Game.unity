@@ -5441,6 +5441,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6986371466421367663, guid: 124ad46aec1102e47a4cdae502be89aa, type: 3}
   m_PrefabInstance: {fileID: 253786198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &104801930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104801931}
+  m_Layer: 0
+  m_Name: LabyrinthExit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &104801931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104801930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0030003188, y: -0.995917, z: 0.08266076, w: 0.03615966}
+  m_LocalPosition: {x: 111.04472, y: -8.277633, z: 72.04187}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1467139230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &127997508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8573,6 +8604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_tutoWindow: {fileID: 4669175017777551213, guid: 0ebc2302c54be904c947dc229244d88f, type: 3}
+  m_LabyrinthExit: {fileID: 104801931}
 --- !u!1001 &1006642429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10387,6 +10419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1430582752}
+  - {fileID: 104801931}
   m_Father: {fileID: 155753750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1467139231

@@ -20,6 +20,13 @@ public class PlayerManager : MonoBehaviour
         }
             DontDestroyOnLoad(gameObject);
     }
+    public void SetPlayer(Transform player)
+    {
+        if(m_player == null)
+        {
+            m_player = player;
+        }
+    }
 
     public void AddItem(Items itemToAdd)
     {
@@ -61,6 +68,10 @@ public class PlayerManager : MonoBehaviour
         Rigidbody rb = m_player.GetComponent<Rigidbody>();
         if (rb != null) rb.linearVelocity = Vector3.zero;
     }
+    public void SetPlayerPosition(Transform destination,Quaternion rotation)
+    {
+        SetPlayerPosition(destination);
+        m_player.rotation = rotation;
+    }
 
-    
 }
