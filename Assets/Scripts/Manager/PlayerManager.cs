@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public PlayerInventoryController m_inventory;
     [SerializeField] private Transform m_player;
 
+    private float m_currentSanity = 100;
+
     public void Awake()
     {
         if(Instance == null)
@@ -74,4 +76,16 @@ public class PlayerManager : MonoBehaviour
         m_player.rotation = rotation;
     }
 
+    public float GetSanaity()
+    {
+        return m_currentSanity;
+    }
+    public void RemoveSanity(float sanityToRemove)
+    {
+        m_currentSanity -= sanityToRemove;
+    }
+    public void SetSanity(float sanity)
+    {
+        m_currentSanity = sanity;
+    }
 }

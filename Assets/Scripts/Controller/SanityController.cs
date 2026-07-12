@@ -15,7 +15,7 @@ public class SanityController : MonoBehaviour
     [SerializeField] private SanityData m_firstTimeOnLostSanity;
     private float m_firstTimeSanityLostRate = 25f;
     private SanitySliderWindow m_currentSanitySliderWindow;
-    private float m_sanity = 100;
+
     private float m_maxSanity = 100;
     private CameraEffectController m_cameraEffectController;
     
@@ -52,6 +52,7 @@ public class SanityController : MonoBehaviour
         {
             m_sanityLostRate = 0.25f;
             m_currentSanitySliderWindow = (SanitySliderWindow)UIManager.Instance.OpenWindow(m_sanitySliderWindow);
+            m_currentSanitySliderWindow.SetSanity(PlayerManager.Instance.GetSanaity() / m_maxSanity);
         }
         else
         {
@@ -68,20 +69,21 @@ public class SanityController : MonoBehaviour
 
     private IEnumerator LostSanityCoroutine()
     {   
-        while (m_sanity > 0)
+        while (PlayerManager.Instance.GetSanaity() > 0)
         {
-            m_sanity -= m_sanityLostRate * Time.deltaTime;
+            PlayerManager.Instance.RemoveSanity(m_sanityLostRate * Time.deltaTime);
 
             if (m_currentSanitySliderWindow != null)
             {
-                m_currentSanitySliderWindow.SetSanity(m_sanity / m_maxSanity);
+                Debug.Log(PlayerManager.Instance.GetSanaity());
+                m_currentSanitySliderWindow.SetSanity(PlayerManager.Instance.GetSanaity() / m_maxSanity);
             }
             yield return null;
         }
-        if (m_sanity <= 0)
+        if (PlayerManager.Instance.GetSanaity() <= 0)
         {
             //screen tout noire, reload de la scene
-            m_sanity = 0;
+            PlayerManager.Instance.SetSanity(0);
             m_sanityLostRate = 0.25f;
             SceneLoaderManager.Instance.LoadScene(GAME_SCENE);
 
