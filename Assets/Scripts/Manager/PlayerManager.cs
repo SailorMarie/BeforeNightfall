@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     public Action m_interact;
     [SerializeField] public PlayerInventoryController m_inventory;
     [SerializeField] private Transform m_player;
+    private int m_boneInPlace = 0;
 
     private float m_currentSanity = 100;
 
@@ -87,5 +88,14 @@ public class PlayerManager : MonoBehaviour
     public void SetSanity(float sanity)
     {
         m_currentSanity = sanity;
+    }
+
+    public void AddBoneKey()
+    {
+        m_boneInPlace++;
+    }
+    public int GetNumberOfBonePLace()
+    {
+        return m_boneInPlace;
     }
 }
