@@ -31,19 +31,6 @@ public class CameraFollow : MonoBehaviour
             Debug.LogError("Your bottom clamp and top clamp values are inverted. Please make sure the bottom clamp value is smaller than your top clamp value.");
         }
     }
-    //private void LateUpdate()
-    //{
-    //    CameraLogic();
-
-    //}
-    //private void FixedUpdate()
-    //{
-
-    //}
-    //private void Update()
-    //{
-        
-    //}
 
     public void UpdateCameraLogic()
     {

@@ -75,7 +75,6 @@ public class SanityController : MonoBehaviour
 
             if (m_currentSanitySliderWindow != null)
             {
-                Debug.Log(PlayerManager.Instance.GetSanaity());
                 m_currentSanitySliderWindow.SetSanity(PlayerManager.Instance.GetSanaity() / m_maxSanity);
             }
             yield return null;
