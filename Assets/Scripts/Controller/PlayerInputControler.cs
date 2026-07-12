@@ -11,6 +11,8 @@ public class PlayerInputControler : MonoBehaviour
     [SerializeField]private int m_jumpForce;
     [SerializeField]private int m_maxDistance = 1000; //max distance du rayCast
     [SerializeField] private Material m_objectHightlightMaterial;
+    [SerializeField] private CameraFollow m_cameraFollow;
+
     private const int DIRECTION = 10000;
    
     private Rigidbody m_body;
@@ -67,7 +69,10 @@ public class PlayerInputControler : MonoBehaviour
 
     }
 
-
+    private void Update()
+    {
+        
+    }
 
     private void FixedUpdate()
     {
@@ -86,6 +91,7 @@ public class PlayerInputControler : MonoBehaviour
         {
             m_body.AddForceAtPosition(new Vector2(0, m_jumpForce), Vector2.up, ForceMode.Impulse);
         }
+        m_cameraFollow.UpdateCameraLogic();
     }
 
     private void LateUpdate()

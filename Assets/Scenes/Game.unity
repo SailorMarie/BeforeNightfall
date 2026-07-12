@@ -11480,6 +11480,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5615619793849191200, guid: 8027d71f5c1f2694497db16ac07701e3, type: 3}
   m_PrefabInstance: {fileID: 1421139876461705854}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1762445226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 402188530253986493, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+  m_PrefabInstance: {fileID: 3453886030981932234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1431f4932159a9047a42fc1f41435ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1770587507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13991,6 +14002,10 @@ PrefabInstance:
       propertyPath: m_sensitivity
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2750426657796097956, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
+      propertyPath: m_cameraFollow
+      value: 
+      objectReference: {fileID: 1762445226}
     - target: {fileID: 3029866327152050908, guid: 856dfd759837f634cb03e8684f3822c8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

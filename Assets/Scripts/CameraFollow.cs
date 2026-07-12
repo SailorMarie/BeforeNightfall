@@ -13,6 +13,7 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("Please make sure the bottom clamp value is under the top clamp value")]
     [SerializeField] private float m_topClamp;
 
+
     //en haut
     private float cinemachineTargetPitch;
     //gauche droite
@@ -30,12 +31,25 @@ public class CameraFollow : MonoBehaviour
             Debug.LogError("Your bottom clamp and top clamp values are inverted. Please make sure the bottom clamp value is smaller than your top clamp value.");
         }
     }
+    //private void LateUpdate()
+    //{
+    //    CameraLogic();
 
-    void LateUpdate()
+    //}
+    //private void FixedUpdate()
+    //{
+
+    //}
+    //private void Update()
+    //{
+        
+    //}
+
+    public void UpdateCameraLogic()
     {
         CameraLogic();
-    }
 
+    }
     private void CameraLogic()
     {
         Vector2 camAmt = _cameraMovement.ReadValue<Vector2>();
