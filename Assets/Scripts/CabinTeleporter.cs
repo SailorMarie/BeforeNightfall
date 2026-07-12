@@ -25,8 +25,13 @@ public class CabinTeleporter : Teleporter
             m_cabinTeleportController.OnTeleporterReach?.Invoke(m_destination);
             m_cameraEffectController.OnTeleportEffect?.Invoke();
             m_popUpController?.OpenPopUp(m_popUpWindow);
-            m_teleportZone.enabled = false;
+            DisableTeleporter();
+            LevelManager.Instance.IncreaseCabinState();
         }
+    }
+    public void DisableTeleporter()
+    {
+        m_teleportZone.enabled = false;
     }
     
 }

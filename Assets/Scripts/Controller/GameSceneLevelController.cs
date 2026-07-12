@@ -12,6 +12,7 @@ public class GameSceneLevelController : LevelController
     [SerializeField] List<PickableItem> m_Pickables;
 
     private PopUpController m_popUpController;
+    private CabinTeleportController m_cabinTeleportController;
 
 
     public override void Init()
@@ -25,6 +26,7 @@ public class GameSceneLevelController : LevelController
             PlayerManager.Instance.SetPlayerPosition(m_LabyrinthExit,m_LabyrinthExit.rotation);
         }
             RemoveAlreadyPickedUpItem();
+            m_cabinTeleportController.SetCabinToCorrectStep();
 
     }
 
@@ -42,6 +44,7 @@ public class GameSceneLevelController : LevelController
 
     public override void SetDependencies(GameController gameController)
     {
-     m_popUpController = gameController.popUpController;
+        m_popUpController = gameController.popUpController;
+        m_cabinTeleportController = gameController.cabinTeleportController;
     }
 }
