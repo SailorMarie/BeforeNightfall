@@ -28,4 +28,24 @@ public class CabinTeleportController : MonoBehaviour
     {
         m_cabin.transform.position = destination.position;
     }
+
+    public void SetCabinToCorrectStep()
+    {
+        
+        int step = LevelManager.Instance.M_cabinState;
+        if(step < 0)
+        {
+            return;
+        }else if (step > m_teleportationPoint.Count-1)
+        {
+            step = m_teleportationPoint.Count-1;
+        }
+
+        for (int i = 0; i <= step; i++)
+        {
+            m_teleportationPoint[i].DisableTeleporter();
+        }
+        Teleport(m_teleportationPoint[step].GetDestination());
+
+    }
 }

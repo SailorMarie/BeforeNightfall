@@ -9,4 +9,8 @@ public class Teleporter : MonoBehaviour
     {
         
     }
+    public Transform GetDestination()
+    {
+        return m_destination;
+    }
 }

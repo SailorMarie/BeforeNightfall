@@ -13,6 +13,7 @@ public class CameraFollow : MonoBehaviour
     [Tooltip("Please make sure the bottom clamp value is under the top clamp value")]
     [SerializeField] private float m_topClamp;
 
+
     //en haut
     private float cinemachineTargetPitch;
     //gauche droite
@@ -31,11 +32,11 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    public void UpdateCameraLogic()
     {
         CameraLogic();
-    }
 
+    }
     private void CameraLogic()
     {
         Vector2 camAmt = _cameraMovement.ReadValue<Vector2>();

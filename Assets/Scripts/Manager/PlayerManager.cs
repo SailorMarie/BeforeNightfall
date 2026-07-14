@@ -7,6 +7,9 @@ public class PlayerManager : MonoBehaviour
     public Action m_interact;
     [SerializeField] public PlayerInventoryController m_inventory;
     [SerializeField] private Transform m_player;
+    private int m_boneInPlace = 0;
+
+    private float m_currentSanity = 100;
 
     public void Awake()
     {
@@ -19,6 +22,13 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
             DontDestroyOnLoad(gameObject);
+    }
+    public void SetPlayer(Transform player)
+    {
+        if(m_player == null)
+        {
+            m_player = player;
+        }
     }
 
     public void AddItem(Items itemToAdd)
@@ -61,6 +71,31 @@ public class PlayerManager : MonoBehaviour
         Rigidbody rb = m_player.GetComponent<Rigidbody>();
         if (rb != null) rb.linearVelocity = Vector3.zero;
     }
+    public void SetPlayerPosition(Transform destination,Quaternion rotation)
+    {
+        SetPlayerPosition(destination);
+        m_player.rotation = rotation;
+    }
 
-    
+    public float GetSanaity()
+    {
+        return m_currentSanity;
+    }
+    public void RemoveSanity(float sanityToRemove)
+    {
+        m_currentSanity -= sanityToRemove;
+    }
+    public void SetSanity(float sanity)
+    {
+        m_currentSanity = sanity;
+    }
+
+    public void AddBoneKey()
+    {
+        m_boneInPlace++;
+    }
+    public int GetNumberOfBonePLace()
+    {
+        return m_boneInPlace;
+    }
 }
