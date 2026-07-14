@@ -4995,8 +4995,8 @@
     "m_ObjectId": "39361d66405e48a2b915ea72bf976e64",
     "m_Title": "UV Transform for ripples",
     "m_Position": {
-        "x": -1134.0,
-        "y": -1014.0
+        "x": -1133.9998779296875,
+        "y": -1042.9998779296875
     }
 }
 
@@ -6912,13 +6912,13 @@
     },
     "m_Name": "Tiling And Offset",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -467.0000915527344,
-            "y": -818.0000610351563,
-            "width": 154.0001220703125,
-            "height": 118.0
+            "x": -344.0,
+            "y": -816.0,
+            "width": 154.0,
+            "height": 142.0
         }
     },
     "m_Slots": [
@@ -7012,7 +7012,7 @@
     "m_Title": "blur depth",
     "m_Position": {
         "x": -1856.9998779296875,
-        "y": 1137.0
+        "y": 1136.9998779296875
     }
 }
 
@@ -8545,8 +8545,8 @@
     "m_ObjectId": "8d81fafb9457424fadbc2057e710b217",
     "m_Title": "Gerstner Wave",
     "m_Position": {
-        "x": -1123.0,
-        "y": -1681.9998779296875
+        "x": -1122.9998779296875,
+        "y": -1681.999755859375
     }
 }
 
@@ -9086,7 +9086,7 @@
     "m_Title": "Surface Ripples",
     "m_Position": {
         "x": -3168.0,
-        "y": 491.9998779296875
+        "y": 491.99993896484377
     }
 }
 
@@ -10225,13 +10225,13 @@
     },
     "m_Name": "Tiling And Offset",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -467.0000915527344,
-            "y": -640.0000610351563,
-            "width": 154.0001220703125,
-            "height": 117.99993896484375
+            "x": -344.0,
+            "y": -638.0,
+            "width": 154.0,
+            "height": 142.0
         }
     },
     "m_Slots": [
@@ -10426,8 +10426,8 @@
     "m_ObjectId": "b9015f4c49bc4e02afdd94bae11da32c",
     "m_Title": "chromatic aberration",
     "m_Position": {
-        "x": -1634.0,
-        "y": 427.9998779296875
+        "x": -1633.9998779296875,
+        "y": 427.99993896484377
     }
 }
 
@@ -11727,13 +11727,13 @@
     },
     "m_Name": "Tiling And Offset",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -467.0000915527344,
-            "y": -955.0001220703125,
-            "width": 154.0001220703125,
-            "height": 118.00006103515625
+            "x": -344.0,
+            "y": -953.0,
+            "width": 154.0,
+            "height": 142.0
         }
     },
     "m_Slots": [
@@ -12516,13 +12516,13 @@
     },
     "m_Name": "Time",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -837.0,
-            "y": -898.0001220703125,
-            "width": 78.9998779296875,
-            "height": 77.00006103515625
+            "x": -1026.0,
+            "y": -983.9999389648438,
+            "width": 124.00006103515625,
+            "height": 172.99993896484376
         }
     },
     "m_Slots": [
