@@ -2519,6 +2519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_mainMenuWindow: {fileID: 1903626746691481080, guid: be118eafba2d4104eb52c72392fddd0c, type: 3}
+  m_backgroundSound: {fileID: 11400000, guid: d1950cad787dace4b87e6855b64344f9, type: 2}
 --- !u!1 &1345523043
 GameObject:
   m_ObjectHideFlags: 0
