@@ -10,9 +10,14 @@ public class LoadingScene : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public async void LoadLevel(string SceneToLoad)
+    public void LoadLevel(string SceneToLoad)
     {
         LevelManager.Instance.AddLevel(SceneToLoad);
+        LoadSceneWithTransition(SceneToLoad);
+
+    } 
+    public async void LoadSceneWithTransition(string SceneToLoad)
+    {
         AsyncOperation loadOp = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(SceneToLoad);
         m_Background.SetActive(true);
         loadOp.allowSceneActivation = false;
@@ -26,10 +31,9 @@ public class LoadingScene : MonoBehaviour
 
             await System.Threading.Tasks.Task.Yield();
         }
-        if(m_Background != null)
+        if (m_Background != null)
         {
             m_Background.SetActive(false);
         }
-
-    }   
+    }
 }

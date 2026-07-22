@@ -12,7 +12,7 @@ public class EndGameWindow : MonoBehaviour
     public void RestartGame() 
     {
         m_loadingPanel.SetActive(true);
-        SceneLoaderManager.Instance.LoadScene(FIRST_SCENE);   
+        SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(FIRST_SCENE);   
     }
 
     public void Quit()

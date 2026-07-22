@@ -49,7 +49,7 @@ public class LabyrinthController : MonoBehaviour
             elapse += Time.deltaTime;
             yield return null;
         }
-        SceneLoaderManager.Instance.LoadScene(m_sceneAsset);
+        SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(m_sceneAsset);
         m_currentLabyrinthWindow.Close();
 
     }

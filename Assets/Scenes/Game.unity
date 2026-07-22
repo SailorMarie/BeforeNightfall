@@ -7557,28 +7557,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f11b361fcc4b45f499732c9b50426d90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 764985554}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: f11b361fcc4b45f499732c9b50426d90, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 764985553}
   m_SourcePrefab: {fileID: 100100000, guid: f11b361fcc4b45f499732c9b50426d90, type: 3}
 --- !u!1 &764985552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f11b361fcc4b45f499732c9b50426d90, type: 3}
   m_PrefabInstance: {fileID: 764985551}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &764985553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764985552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da2f6340ee97e640bfccadeca7f6c67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_window: {fileID: 0}
 --- !u!65 &764985554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10613,6 +10597,17 @@ MonoBehaviour:
   m_enterLabyrinthTrigger: {fileID: 1430582753}
   m_warningBeforeLabyrinthWindow: {fileID: 7296114504603524100, guid: d4191baa87e91774a842a2d85beffba8, type: 3}
   m_warningLabyrinthCompleteWindow: {fileID: 0}
+--- !u!114 &1503485763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8084493836826532836, guid: 577a7f21475374544b9741d6e0a71b3b, type: 3}
+  m_PrefabInstance: {fileID: 1006642429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8087e00bcbaf267498e8521874ef4321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1523468179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13064,7 +13059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cabinTrigger: {fileID: 1821548744}
-  m_interactibleSkull: {fileID: 0}
+  m_interactibleSkull: {fileID: 1503485763}
 --- !u!4 &2052129755
 Transform:
   m_ObjectHideFlags: 0

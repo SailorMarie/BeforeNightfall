@@ -20,6 +20,6 @@ public class EndGameController : MonoBehaviour
 
     private void EndGame()
     {
-        SceneLoaderManager.Instance.LoadScene(END_GAME_SCENE);
+        SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(END_GAME_SCENE);
     }
 }

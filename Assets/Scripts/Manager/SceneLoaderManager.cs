@@ -21,10 +21,13 @@ public class SceneLoaderManager: MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void LoadScene(string sceneName)
+    public void LoadAndAddSceneToLevelManager(string sceneName)
     {
         m_loadingScene.LoadLevel(sceneName);
     }
-
+    public void LoadScene(string sceneName)
+    {
+        m_loadingScene.LoadSceneWithTransition(sceneName);
+    }
 
 }

@@ -28,6 +28,6 @@ public class ToCabinController : MonoBehaviour
 
     private void GoToCabin()
     {
-        SceneLoaderManager.Instance.LoadScene(CABIN_SCENE);
+        SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(CABIN_SCENE);
     }
 }

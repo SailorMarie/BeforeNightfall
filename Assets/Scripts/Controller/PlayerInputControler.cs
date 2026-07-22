@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -33,8 +34,24 @@ public class PlayerInputControler : MonoBehaviour
         m_body = GetComponent<Rigidbody>();    
         m_inputAction = InputSystem.actions;
         m_interact = m_inputAction.FindAction("Interact");
-        PlayerManager.Instance.SetPlayer(gameObject.transform);
+        if(PlayerManager.Instance != null) 
+        {
+            PlayerManager.Instance.SetPlayer(gameObject.transform);
+        }
+        else
+        {
+            StartCoroutine(SetPlayerAfterPLayerManagerIsInitialize());
+        }
 
+    }
+
+    private IEnumerator SetPlayerAfterPLayerManagerIsInitialize()
+    {
+        while (PlayerManager.Instance == null)
+        {
+            yield return null;
+        }
+        PlayerManager.Instance.SetPlayer(gameObject.transform);
     }
 
     public void OnInventory(InputAction.CallbackContext context)

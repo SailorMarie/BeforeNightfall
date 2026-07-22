@@ -431,3 +431,4 @@ MonoBehaviour:
   m_jumpForce: 200
   m_maxDistance: 4
   m_objectHightlightMaterial: {fileID: 2100000, guid: 6de3f8b70c946174b8bd5c985c7f140b, type: 2}
+  m_cameraFollow: {fileID: 402188530253986493}

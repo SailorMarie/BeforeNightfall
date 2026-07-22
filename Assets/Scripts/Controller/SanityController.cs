@@ -84,7 +84,7 @@ public class SanityController : MonoBehaviour
             //screen tout noire, reload de la scene
             PlayerManager.Instance.SetSanity(0);
             m_sanityLostRate = 0.25f;
-            SceneLoaderManager.Instance.LoadScene(GAME_SCENE);
+            SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(GAME_SCENE);
 
         }
     }

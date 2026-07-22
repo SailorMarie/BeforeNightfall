@@ -42,7 +42,7 @@ public class ForestController : MonoBehaviour
         {
             if (m_inventoryController.HasItem(m_keyItemNeeded))
             {
-                SceneLoaderManager.Instance.LoadScene(m_labyrinthScene);
+                SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(m_labyrinthScene);
             }
             else
             {
