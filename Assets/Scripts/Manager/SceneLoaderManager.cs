@@ -23,7 +23,7 @@ public class SceneLoaderManager: MonoBehaviour
 
     public void LoadAndAddSceneToLevelManager(string sceneName)
     {
-        m_loadingScene.LoadLevel(sceneName);
+        m_loadingScene.LoadLevel(sceneName); 
     }
     public void LoadScene(string sceneName)
     {

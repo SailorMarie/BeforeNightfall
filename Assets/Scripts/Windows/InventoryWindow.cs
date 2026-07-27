@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventoryWindow : Window
 {
     private PlayerInventoryController m_playerInventory;
-    [SerializeField] private List<Image> m_inventorySlot;
+    [SerializeField] private List<InventorySlot> m_inventorySlot;
     [SerializeField] private Image m_selectedItemIcon;
     [SerializeField] private TextMeshProUGUI m_selectedItemName;
     [SerializeField] private TextMeshProUGUI m_selectedItemDescription;
@@ -19,7 +19,12 @@ public class InventoryWindow : Window
         int index = 0;
         foreach(var item in m_playerInventory.GetAllItemsInInventory())
         {
-            m_inventorySlot[index].sprite = item.Sprite;
+            m_inventorySlot[index].button.image.sprite = item.Sprite;
+            if (m_inventorySlot[index].button.image.sprite != null)
+            {
+                m_inventorySlot[index].itemCount.text = $"x{m_playerInventory.GetItemCount(item)}";
+
+            }
             index++;
         }
     }

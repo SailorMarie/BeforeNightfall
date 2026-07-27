@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -94,5 +95,14 @@ public class PlayerInventoryController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         InputSystem.actions.actionMaps[0].Disable();
         InputSystem.actions.actionMaps[1].Enable();
+    }
+
+    public int GetItemCount(Items item)
+    {
+        if(m_inventory.ContainsKey(item))
+        {
+            return m_inventory[item];
+        }
+        return 0;
     }
 }
