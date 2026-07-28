@@ -50,6 +50,7 @@ public class SanityController : MonoBehaviour
         }
         if (m_firstTimeOnLostSanity.normalSanity)
         {
+
             m_sanityLostRate = 0.25f;
             m_currentSanitySliderWindow = (SanitySliderWindow)UIManager.Instance.OpenWindow(m_sanitySliderWindow);
             m_currentSanitySliderWindow.SetSanity(PlayerManager.Instance.GetSanaity() / m_maxSanity);

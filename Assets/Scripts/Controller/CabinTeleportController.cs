@@ -46,6 +46,5 @@ public class CabinTeleportController : MonoBehaviour
             m_teleportationPoint[i].DisableTeleporter();
         }
         Teleport(m_teleportationPoint[step].GetDestination());
-
     }
 }

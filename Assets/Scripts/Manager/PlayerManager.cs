@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public PlayerInventoryController m_inventory;
     [SerializeField] private Transform m_player;
     private int m_boneInPlace = 0;
-
+    private float m_maxSanity = 100;
     private float m_currentSanity = 100;
 
     public void Awake()
@@ -97,5 +97,15 @@ public class PlayerManager : MonoBehaviour
     public int GetNumberOfBonePLace()
     {
         return m_boneInPlace;
+    }
+
+    public float GetMaxSanity()
+    {
+        return m_maxSanity;
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,18 +10,19 @@ public class LevelManager : MonoBehaviour
     private List<string> m_pickedUpItem = new List<string>();
     private int m_cabinState = -1;
 
+    public Action OnGameEnd;
     public int M_cabinState => m_cabinState;
     public void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
     public void AddLevel(string levelName)
     {
@@ -60,5 +62,13 @@ public class LevelManager : MonoBehaviour
     public void IncreaseCabinState()
     {
         m_cabinState++;
+    }
+
+    public void Reset()
+    {
+        numberOfTimeLevelLoaded.Clear();
+        m_pickedUpItem.Clear();
+        m_cabinState = -1;
+        OnGameEnd?.Invoke();
     }
 }

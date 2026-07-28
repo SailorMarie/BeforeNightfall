@@ -125,7 +125,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 35896085}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5808594567881064833, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
       propertyPath: m_Name
@@ -133,15 +133,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908663808426859143, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.887634
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8908663808426859143, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.034651
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8908663808426859143, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -68.90088
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8908663808426859143, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -176,47 +176,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
---- !u!4 &25796721 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8908663808426859143, guid: b6d4a06867e27cf43a3792356a9a76ba, type: 3}
-  m_PrefabInstance: {fileID: 25796720}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &35896084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 35896085}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &35896085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35896084}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.887634, y: 15.034651, z: 68.90088}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1309625657}
-  - {fileID: 1870567097}
-  - {fileID: 1028966019}
-  - {fileID: 25796721}
-  - {fileID: 1897030385}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &47480422
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +632,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (5)
@@ -888,7 +847,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (2)
@@ -1318,7 +1277,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (7)
@@ -1690,7 +1649,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (3)
@@ -1915,11 +1874,11 @@ Transform:
   m_GameObject: {fileID: 1028966018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 420.09485, y: 255.60774, z: -68.90088}
+  m_LocalPosition: {x: 479.98248, y: 270.6424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 35896085}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1028966020
 MonoBehaviour:
@@ -2281,7 +2240,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (4)
@@ -2417,7 +2376,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (11)
@@ -2435,19 +2394,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 35896085}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 250392609786708102, guid: e749215db741f7e4cad367b1f04b5b89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.2805
+      value: 169.16814
       objectReference: {fileID: 0}
     - target: {fileID: 250392609786708102, guid: e749215db741f7e4cad367b1f04b5b89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.578106
+      value: 10.456545
       objectReference: {fileID: 0}
     - target: {fileID: 250392609786708102, guid: e749215db741f7e4cad367b1f04b5b89, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.781555
+      value: 113.682434
       objectReference: {fileID: 0}
     - target: {fileID: 250392609786708102, guid: e749215db741f7e4cad367b1f04b5b89, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2494,11 +2453,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e749215db741f7e4cad367b1f04b5b89, type: 3}
---- !u!4 &1309625657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 250392609786708102, guid: e749215db741f7e4cad367b1f04b5b89, type: 3}
-  m_PrefabInstance: {fileID: 1309625656}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1347428469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2551,6 +2505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: 7826601984677990377, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2681727458225203314, guid: 4f08941907579fa48a8e0e5a52245817, type: 3}
     m_RemovedGameObjects: []
@@ -2578,7 +2536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_item: {fileID: 11400000, guid: b99342f9e56d17f42aad0c36a238356c, type: 2}
-  m_guid: 
+  m_guid: c61e06980e5852f4dab0591279a1dfe5
 --- !u!1 &1415937651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,7 +2802,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (8)
@@ -3127,7 +3085,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (10)
@@ -3352,7 +3310,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (1)
@@ -3516,7 +3474,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (6)
@@ -3553,15 +3511,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870567096}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 59.887634, y: 15.034651, z: 68.90088}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1946496621}
   - {fileID: 383966115}
   - {fileID: 159791774}
-  m_Father: {fileID: 35896085}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1870567098
 MonoBehaviour:
@@ -3604,12 +3562,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897030384}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 59.887634, y: 15.034651, z: 68.90088}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 35896085}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1897030386
 MonoBehaviour:
@@ -4117,7 +4075,11 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
+    - target: {fileID: 4880732511349447396, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
+      propertyPath: Priority
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow (9)
@@ -4246,7 +4208,7 @@ PrefabInstance:
     - target: {fileID: 1925138609076966694, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_flyAwayClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9dabaef0cd2ecb241956e3db52d3bc8d, type: 3}
+      objectReference: {fileID: 11400000, guid: e3f54390a32eefa43abebd9d4eb3c1fd, type: 2}
     - target: {fileID: 7406065161153457831, guid: 2dc07886855cab64ba9ce81a6ccd7125, type: 3}
       propertyPath: m_Name
       value: crow
@@ -4270,7 +4232,11 @@ SceneRoots:
   - {fileID: 1841126974}
   - {fileID: 190356334}
   - {fileID: 1347428469}
-  - {fileID: 35896085}
+  - {fileID: 1309625656}
+  - {fileID: 1870567097}
+  - {fileID: 1028966019}
+  - {fileID: 25796720}
+  - {fileID: 1897030385}
   - {fileID: 760759024}
   - {fileID: 4937072915643458002}
   - {fileID: 2083878768}

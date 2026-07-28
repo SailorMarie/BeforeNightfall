@@ -35,7 +35,7 @@ public class CraftingStationController : MonoBehaviour
         m_playerInventoryController = PlayerManager.Instance.m_inventory;
         foreach(var interactibleCraftStation in m_interactibleCraftStation)
         {
-            interactibleCraftStation.Init(this);
+            interactibleCraftStation?.Init(this);
         }
     }
 

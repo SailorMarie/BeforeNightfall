@@ -1,12 +1,11 @@
 using System;
 using System.Collections;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
     [SerializeField] private Animator m_animator;
-    [SerializeField] private AudioClip m_flyAwayClip;
+    [SerializeField] private AudioData m_flyAwayClip;
     [SerializeField] private float m_birdSpeed = 10f;
     private BirdController m_birdController;
     private float m_flyUp;
@@ -25,7 +24,8 @@ public class Bird : MonoBehaviour
     private void OnBirdTrigger()
     {
         m_animator.SetBool("flying", true);
-        AudioSource.PlayClipAtPoint(m_flyAwayClip, transform.position);
+        AudioManager.Instance.PlayAudio(AudioManager.AudioType.SFX,m_flyAwayClip);
+       
 
         m_flyUp = UnityEngine.Random.Range(-23f, -7f);
         m_flyRange = UnityEngine.Random.Range(12f, 167f);

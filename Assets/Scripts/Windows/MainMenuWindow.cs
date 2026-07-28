@@ -8,6 +8,7 @@ public class MainMenuWindow : Window
    public void OnPlayButtonPressed()
     {
         SceneLoaderManager.Instance.LoadScene(FIRST_SCENE_NAME);
+        Close();
     }
 
     public void OnQuitButtonPressed()

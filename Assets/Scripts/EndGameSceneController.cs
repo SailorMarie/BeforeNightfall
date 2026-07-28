@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EndGameWindow : MonoBehaviour
 {
-    private const string FIRST_SCENE = "First_Scene";
+    private const string MAIN_MENU = "GameMenuScene";
     [SerializeField] private GameObject m_loadingPanel;
 
     public void Awake()
@@ -12,7 +12,9 @@ public class EndGameWindow : MonoBehaviour
     public void RestartGame() 
     {
         m_loadingPanel.SetActive(true);
-        SceneLoaderManager.Instance.LoadAndAddSceneToLevelManager(FIRST_SCENE);   
+        LevelManager.Instance.Reset();
+        PlayerManager.Instance.Destroy();
+        SceneLoaderManager.Instance.LoadScene(MAIN_MENU);   
     }
 
     public void Quit()

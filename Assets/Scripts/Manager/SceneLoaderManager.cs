@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,4 +31,5 @@ public class SceneLoaderManager: MonoBehaviour
         m_loadingScene.LoadSceneWithTransition(sceneName);
     }
 
+    
 }
